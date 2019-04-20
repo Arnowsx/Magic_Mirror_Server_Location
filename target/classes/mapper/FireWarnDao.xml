@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.magicmirror.dao.FireWarnDao">
+  <resultMap id="BaseResultMap" type="com.magicmirror.entity.FireWarn">
+    <id column="event_id" jdbcType="INTEGER" property="eventId" />
+    <result column="time" jdbcType="VARCHAR" property="time" />
+    <result column="data" jdbcType="REAL" property="data" />
+    <result column="device_id" jdbcType="INTEGER" property="deviceId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    event_id, `time`, `data`, device_id
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from fire_warn_table
+    where event_id = #{eventId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from fire_warn_table
+    where event_id = #{eventId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="event_id" keyProperty="eventId" parameterType="com.magicmirror.entity.FireWarn" useGeneratedKeys="true">
+    insert into fire_warn_table (`time`, `data`, device_id
+      )
+    values (#{time,jdbcType=VARCHAR}, #{data,jdbcType=REAL}, #{deviceId,jdbcType=INTEGER}
+      )
+  </insert>
+  <insert id="insertSelective" keyColumn="event_id" keyProperty="eventId" parameterType="com.magicmirror.entity.FireWarn" useGeneratedKeys="true">
+    insert into fire_warn_table
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="time != null">
+        `time`,
+      </if>
+      <if test="data != null">
+        `data`,
+      </if>
+      <if test="deviceId != null">
+        device_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="time != null">
+        #{time,jdbcType=VARCHAR},
+      </if>
+      <if test="data != null">
+        #{data,jdbcType=REAL},
+      </if>
+      <if test="deviceId != null">
+        #{deviceId,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.magicmirror.entity.FireWarn">
+    update fire_warn_table
+    <set>
+      <if test="time != null">
+        `time` = #{time,jdbcType=VARCHAR},
+      </if>
+      <if test="data != null">
+        `data` = #{data,jdbcType=REAL},
+      </if>
+      <if test="deviceId != null">
+        device_id = #{deviceId,jdbcType=INTEGER},
+      </if>
+    </set>
+    where event_id = #{eventId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.magicmirror.entity.FireWarn">
+    update fire_warn_table
+    set `time` = #{time,jdbcType=VARCHAR},
+      `data` = #{data,jdbcType=REAL},
+      device_id = #{deviceId,jdbcType=INTEGER}
+    where event_id = #{eventId,jdbcType=INTEGER}
+  </update>
+</mapper>

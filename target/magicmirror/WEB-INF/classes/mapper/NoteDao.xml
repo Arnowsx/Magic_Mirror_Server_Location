@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.magicmirror.dao.NoteDao">
+  <resultMap id="BaseResultMap" type="com.magicmirror.entity.Note">
+    <id column="note_id" jdbcType="INTEGER" property="noteId" />
+    <result column="save_time" jdbcType="VARCHAR" property="saveTime" />
+    <result column="text" jdbcType="VARCHAR" property="text" />
+    <result column="device_id" jdbcType="INTEGER" property="deviceId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    note_id, save_time, `text`, device_id
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from note_table
+    where note_id = #{noteId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from note_table
+    where note_id = #{noteId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="note_id" keyProperty="noteId" parameterType="com.magicmirror.entity.Note" useGeneratedKeys="true">
+    insert into note_table (save_time, `text`, device_id
+      )
+    values (#{saveTime,jdbcType=VARCHAR}, #{text,jdbcType=VARCHAR}, #{deviceId,jdbcType=INTEGER}
+      )
+  </insert>
+  <insert id="insertSelective" keyColumn="note_id" keyProperty="noteId" parameterType="com.magicmirror.entity.Note" useGeneratedKeys="true">
+    insert into note_table
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="saveTime != null">
+        save_time,
+      </if>
+      <if test="text != null">
+        `text`,
+      </if>
+      <if test="deviceId != null">
+        device_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="saveTime != null">
+        #{saveTime,jdbcType=VARCHAR},
+      </if>
+      <if test="text != null">
+        #{text,jdbcType=VARCHAR},
+      </if>
+      <if test="deviceId != null">
+        #{deviceId,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.magicmirror.entity.Note">
+    update note_table
+    <set>
+      <if test="saveTime != null">
+        save_time = #{saveTime,jdbcType=VARCHAR},
+      </if>
+      <if test="text != null">
+        `text` = #{text,jdbcType=VARCHAR},
+      </if>
+      <if test="deviceId != null">
+        device_id = #{deviceId,jdbcType=INTEGER},
+      </if>
+    </set>
+    where note_id = #{noteId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.magicmirror.entity.Note">
+    update note_table
+    set save_time = #{saveTime,jdbcType=VARCHAR},
+      `text` = #{text,jdbcType=VARCHAR},
+      device_id = #{deviceId,jdbcType=INTEGER}
+    where note_id = #{noteId,jdbcType=INTEGER}
+  </update>
+</mapper>

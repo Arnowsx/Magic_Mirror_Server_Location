@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.magicmirror.dao.DeviceLoginLogDao">
+  <resultMap id="BaseResultMap" type="com.magicmirror.entity.DeviceLoginLog">
+    <id column="event_id" jdbcType="INTEGER" property="eventId" />
+    <result column="device_id" jdbcType="INTEGER" property="deviceId" />
+    <result column="device_login_ip" jdbcType="VARCHAR" property="deviceLoginIp" />
+    <result column="device_login_last_time" jdbcType="VARCHAR" property="deviceLoginLastTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    event_id, device_id, device_login_ip, device_login_last_time
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from device_login_log_table
+    where event_id = #{eventId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from device_login_log_table
+    where event_id = #{eventId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="event_id" keyProperty="eventId" parameterType="com.magicmirror.entity.DeviceLoginLog" useGeneratedKeys="true">
+    insert into device_login_log_table (device_id, device_login_ip, device_login_last_time
+      )
+    values (#{deviceId,jdbcType=INTEGER}, #{deviceLoginIp,jdbcType=VARCHAR}, #{deviceLoginLastTime,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" keyColumn="event_id" keyProperty="eventId" parameterType="com.magicmirror.entity.DeviceLoginLog" useGeneratedKeys="true">
+    insert into device_login_log_table
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="deviceId != null">
+        device_id,
+      </if>
+      <if test="deviceLoginIp != null">
+        device_login_ip,
+      </if>
+      <if test="deviceLoginLastTime != null">
+        device_login_last_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="deviceId != null">
+        #{deviceId,jdbcType=INTEGER},
+      </if>
+      <if test="deviceLoginIp != null">
+        #{deviceLoginIp,jdbcType=VARCHAR},
+      </if>
+      <if test="deviceLoginLastTime != null">
+        #{deviceLoginLastTime,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.magicmirror.entity.DeviceLoginLog">
+    update device_login_log_table
+    <set>
+      <if test="deviceId != null">
+        device_id = #{deviceId,jdbcType=INTEGER},
+      </if>
+      <if test="deviceLoginIp != null">
+        device_login_ip = #{deviceLoginIp,jdbcType=VARCHAR},
+      </if>
+      <if test="deviceLoginLastTime != null">
+        device_login_last_time = #{deviceLoginLastTime,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where event_id = #{eventId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.magicmirror.entity.DeviceLoginLog">
+    update device_login_log_table
+    set device_id = #{deviceId,jdbcType=INTEGER},
+      device_login_ip = #{deviceLoginIp,jdbcType=VARCHAR},
+      device_login_last_time = #{deviceLoginLastTime,jdbcType=VARCHAR}
+    where event_id = #{eventId,jdbcType=INTEGER}
+  </update>
+</mapper>

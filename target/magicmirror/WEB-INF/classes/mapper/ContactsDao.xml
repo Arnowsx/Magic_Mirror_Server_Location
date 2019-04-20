@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.magicmirror.dao.ContactsDao">
+  <resultMap id="BaseResultMap" type="com.magicmirror.entity.Contacts">
+    <id column="contact_id" jdbcType="INTEGER" property="contactId" />
+    <result column="contact_name" jdbcType="VARCHAR" property="contactName" />
+    <result column="telephone" jdbcType="VARCHAR" property="telephone" />
+    <result column="weixin" jdbcType="VARCHAR" property="weixin" />
+    <result column="qq" jdbcType="VARCHAR" property="qq" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    contact_id, contact_name, telephone, weixin, qq
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from contacts_table
+    where contact_id = #{contactId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from contacts_table
+    where contact_id = #{contactId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="contact_id" keyProperty="contactId" parameterType="com.magicmirror.entity.Contacts" useGeneratedKeys="true">
+    insert into contacts_table (contact_name, telephone, weixin, 
+      qq)
+    values (#{contactName,jdbcType=VARCHAR}, #{telephone,jdbcType=VARCHAR}, #{weixin,jdbcType=VARCHAR}, 
+      #{qq,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" keyColumn="contact_id" keyProperty="contactId" parameterType="com.magicmirror.entity.Contacts" useGeneratedKeys="true">
+    insert into contacts_table
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="contactName != null">
+        contact_name,
+      </if>
+      <if test="telephone != null">
+        telephone,
+      </if>
+      <if test="weixin != null">
+        weixin,
+      </if>
+      <if test="qq != null">
+        qq,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="contactName != null">
+        #{contactName,jdbcType=VARCHAR},
+      </if>
+      <if test="telephone != null">
+        #{telephone,jdbcType=VARCHAR},
+      </if>
+      <if test="weixin != null">
+        #{weixin,jdbcType=VARCHAR},
+      </if>
+      <if test="qq != null">
+        #{qq,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.magicmirror.entity.Contacts">
+    update contacts_table
+    <set>
+      <if test="contactName != null">
+        contact_name = #{contactName,jdbcType=VARCHAR},
+      </if>
+      <if test="telephone != null">
+        telephone = #{telephone,jdbcType=VARCHAR},
+      </if>
+      <if test="weixin != null">
+        weixin = #{weixin,jdbcType=VARCHAR},
+      </if>
+      <if test="qq != null">
+        qq = #{qq,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where contact_id = #{contactId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.magicmirror.entity.Contacts">
+    update contacts_table
+    set contact_name = #{contactName,jdbcType=VARCHAR},
+      telephone = #{telephone,jdbcType=VARCHAR},
+      weixin = #{weixin,jdbcType=VARCHAR},
+      qq = #{qq,jdbcType=VARCHAR}
+    where contact_id = #{contactId,jdbcType=INTEGER}
+  </update>
+</mapper>

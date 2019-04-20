@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.magicmirror.dao.VoiceRecordDao">
+  <resultMap id="BaseResultMap" type="com.magicmirror.entity.VoiceRecord">
+    <id column="record_id" jdbcType="INTEGER" property="recordId" />
+    <result column="voice_type" jdbcType="INTEGER" property="voiceType" />
+    <result column="voice_text" jdbcType="VARCHAR" property="voiceText" />
+    <result column="device_id" jdbcType="INTEGER" property="deviceId" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.magicmirror.entity.VoiceRecord">
+    <result column="voice_file_blob" jdbcType="LONGVARBINARY" property="voiceFileBlob" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    record_id, voice_type, voice_text, device_id
+  </sql>
+  <sql id="Blob_Column_List">
+    voice_file_blob
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="ResultMapWithBLOBs">
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from voice_record_table
+    where record_id = #{recordId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from voice_record_table
+    where record_id = #{recordId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="record_id" keyProperty="recordId" parameterType="com.magicmirror.entity.VoiceRecord" useGeneratedKeys="true">
+    insert into voice_record_table (voice_type, voice_text, device_id, 
+      voice_file_blob)
+    values (#{voiceType,jdbcType=INTEGER}, #{voiceText,jdbcType=VARCHAR}, #{deviceId,jdbcType=INTEGER}, 
+      #{voiceFileBlob,jdbcType=LONGVARBINARY})
+  </insert>
+  <insert id="insertSelective" keyColumn="record_id" keyProperty="recordId" parameterType="com.magicmirror.entity.VoiceRecord" useGeneratedKeys="true">
+    insert into voice_record_table
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="voiceType != null">
+        voice_type,
+      </if>
+      <if test="voiceText != null">
+        voice_text,
+      </if>
+      <if test="deviceId != null">
+        device_id,
+      </if>
+      <if test="voiceFileBlob != null">
+        voice_file_blob,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="voiceType != null">
+        #{voiceType,jdbcType=INTEGER},
+      </if>
+      <if test="voiceText != null">
+        #{voiceText,jdbcType=VARCHAR},
+      </if>
+      <if test="deviceId != null">
+        #{deviceId,jdbcType=INTEGER},
+      </if>
+      <if test="voiceFileBlob != null">
+        #{voiceFileBlob,jdbcType=LONGVARBINARY},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.magicmirror.entity.VoiceRecord">
+    update voice_record_table
+    <set>
+      <if test="voiceType != null">
+        voice_type = #{voiceType,jdbcType=INTEGER},
+      </if>
+      <if test="voiceText != null">
+        voice_text = #{voiceText,jdbcType=VARCHAR},
+      </if>
+      <if test="deviceId != null">
+        device_id = #{deviceId,jdbcType=INTEGER},
+      </if>
+      <if test="voiceFileBlob != null">
+        voice_file_blob = #{voiceFileBlob,jdbcType=LONGVARBINARY},
+      </if>
+    </set>
+    where record_id = #{recordId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.magicmirror.entity.VoiceRecord">
+    update voice_record_table
+    set voice_type = #{voiceType,jdbcType=INTEGER},
+      voice_text = #{voiceText,jdbcType=VARCHAR},
+      device_id = #{deviceId,jdbcType=INTEGER},
+      voice_file_blob = #{voiceFileBlob,jdbcType=LONGVARBINARY}
+    where record_id = #{recordId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.magicmirror.entity.VoiceRecord">
+    update voice_record_table
+    set voice_type = #{voiceType,jdbcType=INTEGER},
+      voice_text = #{voiceText,jdbcType=VARCHAR},
+      device_id = #{deviceId,jdbcType=INTEGER}
+    where record_id = #{recordId,jdbcType=INTEGER}
+  </update>
+</mapper>

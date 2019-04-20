@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.magicmirror.dao.WakeUpWordDao">
+  <resultMap id="BaseResultMap" type="com.magicmirror.entity.WakeUpWord">
+    <id column="word_id" jdbcType="INTEGER" property="wordId" />
+    <result column="word_content" jdbcType="VARCHAR" property="wordContent" />
+    <result column="device_id" jdbcType="INTEGER" property="deviceId" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.magicmirror.entity.WakeUpWord">
+    <result column="word_blob" jdbcType="LONGVARBINARY" property="wordBlob" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    word_id, word_content, device_id
+  </sql>
+  <sql id="Blob_Column_List">
+    word_blob
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="ResultMapWithBLOBs">
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from wake_up_word_table
+    where word_id = #{wordId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from wake_up_word_table
+    where word_id = #{wordId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="word_id" keyProperty="wordId" parameterType="com.magicmirror.entity.WakeUpWord" useGeneratedKeys="true">
+    insert into wake_up_word_table (word_content, device_id, word_blob
+      )
+    values (#{wordContent,jdbcType=VARCHAR}, #{deviceId,jdbcType=INTEGER}, #{wordBlob,jdbcType=LONGVARBINARY}
+      )
+  </insert>
+  <insert id="insertSelective" keyColumn="word_id" keyProperty="wordId" parameterType="com.magicmirror.entity.WakeUpWord" useGeneratedKeys="true">
+    insert into wake_up_word_table
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="wordContent != null">
+        word_content,
+      </if>
+      <if test="deviceId != null">
+        device_id,
+      </if>
+      <if test="wordBlob != null">
+        word_blob,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="wordContent != null">
+        #{wordContent,jdbcType=VARCHAR},
+      </if>
+      <if test="deviceId != null">
+        #{deviceId,jdbcType=INTEGER},
+      </if>
+      <if test="wordBlob != null">
+        #{wordBlob,jdbcType=LONGVARBINARY},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.magicmirror.entity.WakeUpWord">
+    update wake_up_word_table
+    <set>
+      <if test="wordContent != null">
+        word_content = #{wordContent,jdbcType=VARCHAR},
+      </if>
+      <if test="deviceId != null">
+        device_id = #{deviceId,jdbcType=INTEGER},
+      </if>
+      <if test="wordBlob != null">
+        word_blob = #{wordBlob,jdbcType=LONGVARBINARY},
+      </if>
+    </set>
+    where word_id = #{wordId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.magicmirror.entity.WakeUpWord">
+    update wake_up_word_table
+    set word_content = #{wordContent,jdbcType=VARCHAR},
+      device_id = #{deviceId,jdbcType=INTEGER},
+      word_blob = #{wordBlob,jdbcType=LONGVARBINARY}
+    where word_id = #{wordId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.magicmirror.entity.WakeUpWord">
+    update wake_up_word_table
+    set word_content = #{wordContent,jdbcType=VARCHAR},
+      device_id = #{deviceId,jdbcType=INTEGER}
+    where word_id = #{wordId,jdbcType=INTEGER}
+  </update>
+</mapper>
