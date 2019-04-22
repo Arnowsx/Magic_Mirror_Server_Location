@@ -1,0 +1,835 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.jeesite.test.InitCoreData" time="14.039" tests="1" errors="1" skipped="0" failures="0">
+  <properties>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="GBK"/>
+    <property name="java.class.path" value="E:\wsx\MagicMirrorServer\target\test-classes;E:\wsx\MagicMirrorServer\src\main\webapp\WEB-INF\classes;C:\Users\zhoux\.m2\repository\com\jeesite\jeesite-module-core\4.1.4-SNAPSHOT\jeesite-module-core-4.1.4-SNAPSHOT.jar;C:\Users\zhoux\.m2\repository\com\oracle\ojdbc6\11.2.0.3\ojdbc6-11.2.0.3.jar;C:\Users\zhoux\.m2\repository\net\sourceforge\jtds\jtds\1.3.1\jtds-1.3.1.jar;C:\Users\zhoux\.m2\repository\org\postgresql\postgresql\42.2.5\postgresql-42.2.5.jar;C:\Users\zhoux\.m2\repository\com\jeesite\jeesite-common\4.1.4-SNAPSHOT\jeesite-common-4.1.4-SNAPSHOT.jar;C:\Users\zhoux\.m2\repository\org\apache\commons\commons-lang3\3.7\commons-lang3-3.7.jar;C:\Users\zhoux\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\zhoux\.m2\repository\commons-io\commons-io\2.6\commons-io-2.6.jar;C:\Users\zhoux\.m2\repository\commons-fileupload\commons-fileupload\1.3.3\commons-fileupload-1.3.3.jar;C:\Users\zhoux\.m2\repository\commons-beanutils\commons-beanutils\1.9.3\commons-beanutils-1.9.3.jar;C:\Users\zhoux\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\zhoux\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;C:\Users\zhoux\.m2\repository\org\apache\commons\commons-text\1.3\commons-text-1.3.jar;C:\Users\zhoux\.m2\repository\org\apache\ant\ant\1.9.7\ant-1.9.7.jar;C:\Users\zhoux\.m2\repository\org\apache\ant\ant-launcher\1.9.7\ant-launcher-1.9.7.jar;C:\Users\zhoux\.m2\repository\de\ruedigermoeller\fst\2.57\fst-2.57.jar;C:\Users\zhoux\.m2\repository\org\javassist\javassist\3.21.0-GA\javassist-3.21.0-GA.jar;C:\Users\zhoux\.m2\repository\org\objenesis\objenesis\2.5.1\objenesis-2.5.1.jar;C:\Users\zhoux\.m2\repository\org\json\json\20180130\json-20180130.jar;C:\Users\zhoux\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.9.7\jackson-core-2.9.7.jar;C:\Users\zhoux\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.9.7\jackson-databind-2.9.7.jar;C:\Users\zhoux\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.9.0\jackson-annotations-2.9.0.jar;C:\Users\zhoux\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-xml\2.9.7\jackson-dataformat-xml-2.9.7.jar;C:\Users\zhoux\.m2\repository\com\fasterxml\jackson\module\jackson-module-jaxb-annotations\2.9.7\jackson-module-jaxb-annotations-2.9.7.jar;C:\Users\zhoux\.m2\repository\org\codehaus\woodstox\stax2-api\3.1.4\stax2-api-3.1.4.jar;C:\Users\zhoux\.m2\repository\com\fasterxml\woodstox\woodstox-core\5.0.3\woodstox-core-5.0.3.jar;C:\Users\zhoux\.m2\repository\dom4j\dom4j\1.6.1\dom4j-1.6.1.jar;C:\Users\zhoux\.m2\repository\xml-apis\xml-apis\1.4.01\xml-apis-1.4.01.jar;C:\Users\zhoux\.m2\repository\jaxen\jaxen\1.1.6\jaxen-1.1.6.jar;C:\Users\zhoux\.m2\repository\org\yaml\snakeyaml\1.19\snakeyaml-1.19.jar;C:\Users\zhoux\.m2\repository\org\apache\httpcomponents\httpclient\4.5.6\httpclient-4.5.6.jar;C:\Users\zhoux\.m2\repository\org\apache\httpcomponents\httpcore\4.4.10\httpcore-4.4.10.jar;C:\Users\zhoux\.m2\repository\org\jsoup\jsoup\1.11.3\jsoup-1.11.3.jar;C:\Users\zhoux\.m2\repository\org\apache\commons\commons-email\1.5\commons-email-1.5.jar;C:\Users\zhoux\.m2\repository\com\sun\mail\javax.mail\1.6.2\javax.mail-1.6.2.jar;C:\Users\zhoux\.m2\repository\javax\activation\activation\1.1.1\activation-1.1.1.jar;C:\Users\zhoux\.m2\repository\eu\bitwalker\UserAgentUtils\1.21\UserAgentUtils-1.21.jar;C:\Users\zhoux\.m2\repository\net\coobird\thumbnailator\0.4.8\thumbnailator-0.4.8.jar;C:\Users\zhoux\.m2\repository\com\twelvemonkeys\imageio\imageio-jpeg\3.4.1\imageio-jpeg-3.4.1.jar;C:\Users\zhoux\.m2\repository\com\twelvemonkeys\imageio\imageio-core\3.4.1\imageio-core-3.4.1.jar;C:\Users\zhoux\.m2\repository\com\twelvemonkeys\imageio\imageio-metadata\3.4.1\imageio-metadata-3.4.1.jar;C:\Users\zhoux\.m2\repository\com\twelvemonkeys\common\common-lang\3.4.1\common-lang-3.4.1.jar;C:\Users\zhoux\.m2\repository\com\twelvemonkeys\common\common-io\3.4.1\common-io-3.4.1.jar;C:\Users\zhoux\.m2\repository\com\twelvemonkeys\common\common-image\3.4.1\common-image-3.4.1.jar;C:\Users\zhoux\.m2\repository\com\bladejava\blade-patchca\1.1.0\blade-patchca-1.1.0.jar;C:\Users\zhoux\.m2\repository\org\projectlombok\lombok\1.16.22\lombok-1.16.22.jar;C:\Users\zhoux\.m2\repository\net\sf\jmimemagic\jmimemagic\0.1.5\jmimemagic-0.1.5.jar;C:\Users\zhoux\.m2\repository\com\google\zxing\core\3.3.2\core-3.3.2.jar;C:\Users\zhoux\.m2\repository\com\google\zxing\javase\3.3.2\javase-3.3.2.jar;C:\Users\zhoux\.m2\repository\com\beust\jcommander\1.72\jcommander-1.72.jar;C:\Users\zhoux\.m2\repository\com\github\jai-imageio\jai-imageio-core\1.3.1\jai-imageio-core-1.3.1.jar;C:\Users\zhoux\.m2\repository\org\apache\poi\poi\3.14\poi-3.14.jar;C:\Users\zhoux\.m2\repository\org\apache\poi\poi-ooxml\3.14\poi-ooxml-3.14.jar;C:\Users\zhoux\.m2\repository\com\github\virtuald\curvesapi\1.03\curvesapi-1.03.jar;C:\Users\zhoux\.m2\repository\org\apache\poi\poi-ooxml-schemas\3.14\poi-ooxml-schemas-3.14.jar;C:\Users\zhoux\.m2\repository\org\apache\xmlbeans\xmlbeans\2.6.0\xmlbeans-2.6.0.jar;C:\Users\zhoux\.m2\repository\stax\stax-api\1.0.1\stax-api-1.0.1.jar;C:\Users\zhoux\.m2\repository\org\apache\poi\poi-scratchpad\3.14\poi-scratchpad-3.14.jar;C:\Users\zhoux\.m2\repository\com\belerweb\pinyin4j\2.5.1\pinyin4j-2.5.1.jar;C:\Users\zhoux\.m2\repository\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;C:\Users\zhoux\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.25\jcl-over-slf4j-1.7.25.jar;C:\Users\zhoux\.m2\repository\org\slf4j\jul-to-slf4j\1.7.25\jul-to-slf4j-1.7.25.jar;C:\Users\zhoux\.m2\repository\org\slf4j\log4j-over-slf4j\1.7.25\log4j-over-slf4j-1.7.25.jar;C:\Users\zhoux\.m2\repository\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar;C:\Users\zhoux\.m2\repository\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar;C:\Users\zhoux\.m2\repository\org\springframework\spring-beans\5.0.10.RELEASE\spring-beans-5.0.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\spring-core\5.0.10.RELEASE\spring-core-5.0.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\spring-jcl\5.0.10.RELEASE\spring-jcl-5.0.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\zhoux\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\zhoux\.m2\repository\org\springframework\spring-test\5.0.10.RELEASE\spring-test-5.0.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\com\jeesite\jeesite-framework\4.1.4-SNAPSHOT\jeesite-framework-4.1.4-SNAPSHOT.jar;C:\Users\zhoux\.m2\repository\com\alibaba\druid\1.1.10\druid-1.1.10.jar;C:\Users\zhoux\.m2\repository\org\springframework\spring-jdbc\5.0.10.RELEASE\spring-jdbc-5.0.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\spring-tx\5.0.10.RELEASE\spring-tx-5.0.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\boot\spring-boot-starter-jta-atomikos\2.0.6.RELEASE\spring-boot-starter-jta-atomikos-2.0.6.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\boot\spring-boot-starter\2.0.6.RELEASE\spring-boot-starter-2.0.6.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\2.0.6.RELEASE\spring-boot-autoconfigure-2.0.6.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\boot\spring-boot-starter-logging\2.0.6.RELEASE\spring-boot-starter-logging-2.0.6.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.10.0\log4j-to-slf4j-2.10.0.jar;C:\Users\zhoux\.m2\repository\org\apache\logging\log4j\log4j-api\2.10.0\log4j-api-2.10.0.jar;C:\Users\zhoux\.m2\repository\com\atomikos\transactions-jms\4.0.6\transactions-jms-4.0.6.jar;C:\Users\zhoux\.m2\repository\com\atomikos\transactions-jta\4.0.6\transactions-jta-4.0.6.jar;C:\Users\zhoux\.m2\repository\com\atomikos\transactions-api\4.0.6\transactions-api-4.0.6.jar;C:\Users\zhoux\.m2\repository\com\atomikos\transactions\4.0.6\transactions-4.0.6.jar;C:\Users\zhoux\.m2\repository\com\atomikos\atomikos-util\4.0.6\atomikos-util-4.0.6.jar;C:\Users\zhoux\.m2\repository\com\atomikos\transactions-jdbc\4.0.6\transactions-jdbc-4.0.6.jar;C:\Users\zhoux\.m2\repository\javax\transaction\javax.transaction-api\1.2\javax.transaction-api-1.2.jar;C:\Users\zhoux\.m2\repository\org\aspectj\aspectjrt\1.8.13\aspectjrt-1.8.13.jar;C:\Users\zhoux\.m2\repository\org\aspectj\aspectjweaver\1.8.13\aspectjweaver-1.8.13.jar;C:\Users\zhoux\.m2\repository\org\mybatis\mybatis\3.4.6\mybatis-3.4.6.jar;C:\Users\zhoux\.m2\repository\org\mybatis\mybatis-spring\1.3.2\mybatis-spring-1.3.2.jar;C:\Users\zhoux\.m2\repository\com\github\jsqlparser\jsqlparser\1.1\jsqlparser-1.1.jar;C:\Users\zhoux\.m2\repository\org\apache\shiro\shiro-core\1.4.0\shiro-core-1.4.0.jar;C:\Users\zhoux\.m2\repository\org\apache\shiro\shiro-lang\1.4.0\shiro-lang-1.4.0.jar;C:\Users\zhoux\.m2\repository\org\apache\shiro\shiro-cache\1.4.0\shiro-cache-1.4.0.jar;C:\Users\zhoux\.m2\repository\org\apache\shiro\shiro-crypto-hash\1.4.0\shiro-crypto-hash-1.4.0.jar;C:\Users\zhoux\.m2\repository\org\apache\shiro\shiro-crypto-core\1.4.0\shiro-crypto-core-1.4.0.jar;C:\Users\zhoux\.m2\repository\org\apache\shiro\shiro-crypto-cipher\1.4.0\shiro-crypto-cipher-1.4.0.jar;C:\Users\zhoux\.m2\repository\org\apache\shiro\shiro-config-core\1.4.0\shiro-config-core-1.4.0.jar;C:\Users\zhoux\.m2\repository\org\apache\shiro\shiro-config-ogdl\1.4.0\shiro-config-ogdl-1.4.0.jar;C:\Users\zhoux\.m2\repository\org\apache\shiro\shiro-event\1.4.0\shiro-event-1.4.0.jar;C:\Users\zhoux\.m2\repository\org\apache\shiro\shiro-spring\1.4.0\shiro-spring-1.4.0.jar;C:\Users\zhoux\.m2\repository\org\apache\shiro\shiro-cas\1.4.0\shiro-cas-1.4.0.jar;C:\Users\zhoux\.m2\repository\org\jasig\cas\client\cas-client-core\3.2.2\cas-client-core-3.2.2.jar;C:\Users\zhoux\.m2\repository\org\apache\shiro\shiro-web\1.4.0\shiro-web-1.4.0.jar;C:\Users\zhoux\.m2\repository\org\apache\commons\commons-pool2\2.5.0\commons-pool2-2.5.0.jar;C:\Users\zhoux\.m2\repository\net\oschina\j2cache\j2cache-core\2.7.0-release\j2cache-core-2.7.0-release.jar;C:\Users\zhoux\.m2\repository\com\github\ben-manes\caffeine\caffeine\2.6.2\caffeine-2.6.2.jar;C:\Users\zhoux\.m2\repository\com\alibaba\fastjson\1.2.49\fastjson-1.2.49.jar;C:\Users\zhoux\.m2\repository\jline\jline\2.14.2\jline-2.14.2.jar;C:\Users\zhoux\.m2\repository\org\springframework\boot\spring-boot-starter-cache\2.0.6.RELEASE\spring-boot-starter-cache-2.0.6.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\spring-context\5.0.10.RELEASE\spring-context-5.0.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\spring-expression\5.0.10.RELEASE\spring-expression-5.0.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\spring-context-support\5.0.10.RELEASE\spring-context-support-5.0.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\boot\spring-boot-starter-data-redis\2.0.6.RELEASE\spring-boot-starter-data-redis-2.0.6.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\data\spring-data-redis\2.0.11.RELEASE\spring-data-redis-2.0.11.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\data\spring-data-keyvalue\2.0.11.RELEASE\spring-data-keyvalue-2.0.11.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\data\spring-data-commons\2.0.11.RELEASE\spring-data-commons-2.0.11.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\spring-oxm\5.0.10.RELEASE\spring-oxm-5.0.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\io\lettuce\lettuce-core\5.0.5.RELEASE\lettuce-core-5.0.5.RELEASE.jar;C:\Users\zhoux\.m2\repository\io\projectreactor\reactor-core\3.1.10.RELEASE\reactor-core-3.1.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\reactivestreams\reactive-streams\1.0.2\reactive-streams-1.0.2.jar;C:\Users\zhoux\.m2\repository\io\netty\netty-common\4.1.29.Final\netty-common-4.1.29.Final.jar;C:\Users\zhoux\.m2\repository\io\netty\netty-transport\4.1.29.Final\netty-transport-4.1.29.Final.jar;C:\Users\zhoux\.m2\repository\io\netty\netty-buffer\4.1.29.Final\netty-buffer-4.1.29.Final.jar;C:\Users\zhoux\.m2\repository\io\netty\netty-resolver\4.1.29.Final\netty-resolver-4.1.29.Final.jar;C:\Users\zhoux\.m2\repository\io\netty\netty-handler\4.1.29.Final\netty-handler-4.1.29.Final.jar;C:\Users\zhoux\.m2\repository\io\netty\netty-codec\4.1.29.Final\netty-codec-4.1.29.Final.jar;C:\Users\zhoux\.m2\repository\org\springframework\boot\spring-boot-test\2.0.6.RELEASE\spring-boot-test-2.0.6.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\boot\spring-boot\2.0.6.RELEASE\spring-boot-2.0.6.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\boot\spring-boot-starter-web\2.0.6.RELEASE\spring-boot-starter-web-2.0.6.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\boot\spring-boot-starter-json\2.0.6.RELEASE\spring-boot-starter-json-2.0.6.RELEASE.jar;C:\Users\zhoux\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.9.7\jackson-datatype-jdk8-2.9.7.jar;C:\Users\zhoux\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.9.7\jackson-datatype-jsr310-2.9.7.jar;C:\Users\zhoux\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.9.7\jackson-module-parameter-names-2.9.7.jar;C:\Users\zhoux\.m2\repository\org\hibernate\validator\hibernate-validator\6.0.13.Final\hibernate-validator-6.0.13.Final.jar;C:\Users\zhoux\.m2\repository\javax\validation\validation-api\2.0.1.Final\validation-api-2.0.1.Final.jar;C:\Users\zhoux\.m2\repository\org\jboss\logging\jboss-logging\3.3.2.Final\jboss-logging-3.3.2.Final.jar;C:\Users\zhoux\.m2\repository\org\springframework\spring-web\5.0.10.RELEASE\spring-web-5.0.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\spring-webmvc\5.0.10.RELEASE\spring-webmvc-5.0.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\com\jeesite\beetl\2.9-SNAPSHOT\beetl-2.9-SNAPSHOT.jar;C:\Users\zhoux\.m2\repository\org\antlr\antlr4-runtime\4.6\antlr4-runtime-4.6.jar;C:\Users\zhoux\.m2\repository\io\swagger\swagger-annotations\1.5.20\swagger-annotations-1.5.20.jar;C:\Users\zhoux\.m2\repository\org\quartz-scheduler\quartz\2.3.0\quartz-2.3.0.jar;C:\Users\zhoux\.m2\repository\com\mchange\mchange-commons-java\0.2.11\mchange-commons-java-0.2.11.jar;C:\Users\zhoux\.m2\repository\com\jeesite\jeesite-module-swagger\4.1.4-SNAPSHOT\jeesite-module-swagger-4.1.4-SNAPSHOT.jar;C:\Users\zhoux\.m2\repository\io\springfox\springfox-swagger2\2.9.2\springfox-swagger2-2.9.2.jar;C:\Users\zhoux\.m2\repository\io\swagger\swagger-models\1.5.20\swagger-models-1.5.20.jar;C:\Users\zhoux\.m2\repository\io\springfox\springfox-spi\2.9.2\springfox-spi-2.9.2.jar;C:\Users\zhoux\.m2\repository\io\springfox\springfox-core\2.9.2\springfox-core-2.9.2.jar;C:\Users\zhoux\.m2\repository\net\bytebuddy\byte-buddy\1.7.11\byte-buddy-1.7.11.jar;C:\Users\zhoux\.m2\repository\io\springfox\springfox-schema\2.9.2\springfox-schema-2.9.2.jar;C:\Users\zhoux\.m2\repository\io\springfox\springfox-swagger-common\2.9.2\springfox-swagger-common-2.9.2.jar;C:\Users\zhoux\.m2\repository\io\springfox\springfox-spring-web\2.9.2\springfox-spring-web-2.9.2.jar;C:\Users\zhoux\.m2\repository\com\google\guava\guava\20.0\guava-20.0.jar;C:\Users\zhoux\.m2\repository\com\fasterxml\classmate\1.3.4\classmate-1.3.4.jar;C:\Users\zhoux\.m2\repository\org\springframework\plugin\spring-plugin-core\1.2.0.RELEASE\spring-plugin-core-1.2.0.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\spring-aop\5.0.10.RELEASE\spring-aop-5.0.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\plugin\spring-plugin-metadata\1.2.0.RELEASE\spring-plugin-metadata-1.2.0.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\mapstruct\mapstruct\1.2.0.Final\mapstruct-1.2.0.Final.jar;C:\Users\zhoux\.m2\repository\io\springfox\springfox-swagger-ui\2.9.2\springfox-swagger-ui-2.9.2.jar;C:\Users\zhoux\.m2\repository\com\jeesite\jeesite-module-weboffice\4.1.4-SNAPSHOT\jeesite-module-weboffice-4.1.4-SNAPSHOT.jar;C:\Users\zhoux\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\2.0.6.RELEASE\spring-boot-starter-tomcat-2.0.6.RELEASE.jar;C:\Users\zhoux\.m2\repository\javax\annotation\javax.annotation-api\1.3.2\javax.annotation-api-1.3.2.jar;C:\Users\zhoux\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\8.5.34\tomcat-embed-core-8.5.34.jar;C:\Users\zhoux\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\8.5.34\tomcat-embed-el-8.5.34.jar;C:\Users\zhoux\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\8.5.34\tomcat-embed-websocket-8.5.34.jar;C:\Users\zhoux\.m2\repository\mysql\mysql-connector-java\8.0.15\mysql-connector-java-8.0.15.jar;C:\Users\zhoux\.m2\repository\com\google\protobuf\protobuf-java\3.6.1\protobuf-java-3.6.1.jar;C:\Users\zhoux\.m2\repository\javax\servlet\javax.servlet-api\3.1.0\javax.servlet-api-3.1.0.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="user.timezone" value=""/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_161\jre\bin"/>
+    <property name="sun.java.command" value="C:\Users\zhoux\AppData\Local\Temp\surefire1638581149857961025\surefirebooter3262195048285262573.jar C:\Users\zhoux\AppData\Local\Temp\surefire1638581149857961025 2019-04-21T13-22-12_532-jvmRun1 surefire6444291504076408377tmp surefire_03516251183759404579tmp"/>
+    <property name="test" value="com.jeesite.test.InitCoreData"/>
+    <property name="surefire.test.class.path" value="E:\wsx\MagicMirrorServer\target\test-classes;E:\wsx\MagicMirrorServer\src\main\webapp\WEB-INF\classes;C:\Users\zhoux\.m2\repository\com\jeesite\jeesite-module-core\4.1.4-SNAPSHOT\jeesite-module-core-4.1.4-SNAPSHOT.jar;C:\Users\zhoux\.m2\repository\com\oracle\ojdbc6\11.2.0.3\ojdbc6-11.2.0.3.jar;C:\Users\zhoux\.m2\repository\net\sourceforge\jtds\jtds\1.3.1\jtds-1.3.1.jar;C:\Users\zhoux\.m2\repository\org\postgresql\postgresql\42.2.5\postgresql-42.2.5.jar;C:\Users\zhoux\.m2\repository\com\jeesite\jeesite-common\4.1.4-SNAPSHOT\jeesite-common-4.1.4-SNAPSHOT.jar;C:\Users\zhoux\.m2\repository\org\apache\commons\commons-lang3\3.7\commons-lang3-3.7.jar;C:\Users\zhoux\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\zhoux\.m2\repository\commons-io\commons-io\2.6\commons-io-2.6.jar;C:\Users\zhoux\.m2\repository\commons-fileupload\commons-fileupload\1.3.3\commons-fileupload-1.3.3.jar;C:\Users\zhoux\.m2\repository\commons-beanutils\commons-beanutils\1.9.3\commons-beanutils-1.9.3.jar;C:\Users\zhoux\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\zhoux\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;C:\Users\zhoux\.m2\repository\org\apache\commons\commons-text\1.3\commons-text-1.3.jar;C:\Users\zhoux\.m2\repository\org\apache\ant\ant\1.9.7\ant-1.9.7.jar;C:\Users\zhoux\.m2\repository\org\apache\ant\ant-launcher\1.9.7\ant-launcher-1.9.7.jar;C:\Users\zhoux\.m2\repository\de\ruedigermoeller\fst\2.57\fst-2.57.jar;C:\Users\zhoux\.m2\repository\org\javassist\javassist\3.21.0-GA\javassist-3.21.0-GA.jar;C:\Users\zhoux\.m2\repository\org\objenesis\objenesis\2.5.1\objenesis-2.5.1.jar;C:\Users\zhoux\.m2\repository\org\json\json\20180130\json-20180130.jar;C:\Users\zhoux\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.9.7\jackson-core-2.9.7.jar;C:\Users\zhoux\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.9.7\jackson-databind-2.9.7.jar;C:\Users\zhoux\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.9.0\jackson-annotations-2.9.0.jar;C:\Users\zhoux\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-xml\2.9.7\jackson-dataformat-xml-2.9.7.jar;C:\Users\zhoux\.m2\repository\com\fasterxml\jackson\module\jackson-module-jaxb-annotations\2.9.7\jackson-module-jaxb-annotations-2.9.7.jar;C:\Users\zhoux\.m2\repository\org\codehaus\woodstox\stax2-api\3.1.4\stax2-api-3.1.4.jar;C:\Users\zhoux\.m2\repository\com\fasterxml\woodstox\woodstox-core\5.0.3\woodstox-core-5.0.3.jar;C:\Users\zhoux\.m2\repository\dom4j\dom4j\1.6.1\dom4j-1.6.1.jar;C:\Users\zhoux\.m2\repository\xml-apis\xml-apis\1.4.01\xml-apis-1.4.01.jar;C:\Users\zhoux\.m2\repository\jaxen\jaxen\1.1.6\jaxen-1.1.6.jar;C:\Users\zhoux\.m2\repository\org\yaml\snakeyaml\1.19\snakeyaml-1.19.jar;C:\Users\zhoux\.m2\repository\org\apache\httpcomponents\httpclient\4.5.6\httpclient-4.5.6.jar;C:\Users\zhoux\.m2\repository\org\apache\httpcomponents\httpcore\4.4.10\httpcore-4.4.10.jar;C:\Users\zhoux\.m2\repository\org\jsoup\jsoup\1.11.3\jsoup-1.11.3.jar;C:\Users\zhoux\.m2\repository\org\apache\commons\commons-email\1.5\commons-email-1.5.jar;C:\Users\zhoux\.m2\repository\com\sun\mail\javax.mail\1.6.2\javax.mail-1.6.2.jar;C:\Users\zhoux\.m2\repository\javax\activation\activation\1.1.1\activation-1.1.1.jar;C:\Users\zhoux\.m2\repository\eu\bitwalker\UserAgentUtils\1.21\UserAgentUtils-1.21.jar;C:\Users\zhoux\.m2\repository\net\coobird\thumbnailator\0.4.8\thumbnailator-0.4.8.jar;C:\Users\zhoux\.m2\repository\com\twelvemonkeys\imageio\imageio-jpeg\3.4.1\imageio-jpeg-3.4.1.jar;C:\Users\zhoux\.m2\repository\com\twelvemonkeys\imageio\imageio-core\3.4.1\imageio-core-3.4.1.jar;C:\Users\zhoux\.m2\repository\com\twelvemonkeys\imageio\imageio-metadata\3.4.1\imageio-metadata-3.4.1.jar;C:\Users\zhoux\.m2\repository\com\twelvemonkeys\common\common-lang\3.4.1\common-lang-3.4.1.jar;C:\Users\zhoux\.m2\repository\com\twelvemonkeys\common\common-io\3.4.1\common-io-3.4.1.jar;C:\Users\zhoux\.m2\repository\com\twelvemonkeys\common\common-image\3.4.1\common-image-3.4.1.jar;C:\Users\zhoux\.m2\repository\com\bladejava\blade-patchca\1.1.0\blade-patchca-1.1.0.jar;C:\Users\zhoux\.m2\repository\org\projectlombok\lombok\1.16.22\lombok-1.16.22.jar;C:\Users\zhoux\.m2\repository\net\sf\jmimemagic\jmimemagic\0.1.5\jmimemagic-0.1.5.jar;C:\Users\zhoux\.m2\repository\com\google\zxing\core\3.3.2\core-3.3.2.jar;C:\Users\zhoux\.m2\repository\com\google\zxing\javase\3.3.2\javase-3.3.2.jar;C:\Users\zhoux\.m2\repository\com\beust\jcommander\1.72\jcommander-1.72.jar;C:\Users\zhoux\.m2\repository\com\github\jai-imageio\jai-imageio-core\1.3.1\jai-imageio-core-1.3.1.jar;C:\Users\zhoux\.m2\repository\org\apache\poi\poi\3.14\poi-3.14.jar;C:\Users\zhoux\.m2\repository\org\apache\poi\poi-ooxml\3.14\poi-ooxml-3.14.jar;C:\Users\zhoux\.m2\repository\com\github\virtuald\curvesapi\1.03\curvesapi-1.03.jar;C:\Users\zhoux\.m2\repository\org\apache\poi\poi-ooxml-schemas\3.14\poi-ooxml-schemas-3.14.jar;C:\Users\zhoux\.m2\repository\org\apache\xmlbeans\xmlbeans\2.6.0\xmlbeans-2.6.0.jar;C:\Users\zhoux\.m2\repository\stax\stax-api\1.0.1\stax-api-1.0.1.jar;C:\Users\zhoux\.m2\repository\org\apache\poi\poi-scratchpad\3.14\poi-scratchpad-3.14.jar;C:\Users\zhoux\.m2\repository\com\belerweb\pinyin4j\2.5.1\pinyin4j-2.5.1.jar;C:\Users\zhoux\.m2\repository\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;C:\Users\zhoux\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.25\jcl-over-slf4j-1.7.25.jar;C:\Users\zhoux\.m2\repository\org\slf4j\jul-to-slf4j\1.7.25\jul-to-slf4j-1.7.25.jar;C:\Users\zhoux\.m2\repository\org\slf4j\log4j-over-slf4j\1.7.25\log4j-over-slf4j-1.7.25.jar;C:\Users\zhoux\.m2\repository\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar;C:\Users\zhoux\.m2\repository\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar;C:\Users\zhoux\.m2\repository\org\springframework\spring-beans\5.0.10.RELEASE\spring-beans-5.0.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\spring-core\5.0.10.RELEASE\spring-core-5.0.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\spring-jcl\5.0.10.RELEASE\spring-jcl-5.0.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\zhoux\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\zhoux\.m2\repository\org\springframework\spring-test\5.0.10.RELEASE\spring-test-5.0.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\com\jeesite\jeesite-framework\4.1.4-SNAPSHOT\jeesite-framework-4.1.4-SNAPSHOT.jar;C:\Users\zhoux\.m2\repository\com\alibaba\druid\1.1.10\druid-1.1.10.jar;C:\Users\zhoux\.m2\repository\org\springframework\spring-jdbc\5.0.10.RELEASE\spring-jdbc-5.0.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\spring-tx\5.0.10.RELEASE\spring-tx-5.0.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\boot\spring-boot-starter-jta-atomikos\2.0.6.RELEASE\spring-boot-starter-jta-atomikos-2.0.6.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\boot\spring-boot-starter\2.0.6.RELEASE\spring-boot-starter-2.0.6.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\2.0.6.RELEASE\spring-boot-autoconfigure-2.0.6.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\boot\spring-boot-starter-logging\2.0.6.RELEASE\spring-boot-starter-logging-2.0.6.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.10.0\log4j-to-slf4j-2.10.0.jar;C:\Users\zhoux\.m2\repository\org\apache\logging\log4j\log4j-api\2.10.0\log4j-api-2.10.0.jar;C:\Users\zhoux\.m2\repository\com\atomikos\transactions-jms\4.0.6\transactions-jms-4.0.6.jar;C:\Users\zhoux\.m2\repository\com\atomikos\transactions-jta\4.0.6\transactions-jta-4.0.6.jar;C:\Users\zhoux\.m2\repository\com\atomikos\transactions-api\4.0.6\transactions-api-4.0.6.jar;C:\Users\zhoux\.m2\repository\com\atomikos\transactions\4.0.6\transactions-4.0.6.jar;C:\Users\zhoux\.m2\repository\com\atomikos\atomikos-util\4.0.6\atomikos-util-4.0.6.jar;C:\Users\zhoux\.m2\repository\com\atomikos\transactions-jdbc\4.0.6\transactions-jdbc-4.0.6.jar;C:\Users\zhoux\.m2\repository\javax\transaction\javax.transaction-api\1.2\javax.transaction-api-1.2.jar;C:\Users\zhoux\.m2\repository\org\aspectj\aspectjrt\1.8.13\aspectjrt-1.8.13.jar;C:\Users\zhoux\.m2\repository\org\aspectj\aspectjweaver\1.8.13\aspectjweaver-1.8.13.jar;C:\Users\zhoux\.m2\repository\org\mybatis\mybatis\3.4.6\mybatis-3.4.6.jar;C:\Users\zhoux\.m2\repository\org\mybatis\mybatis-spring\1.3.2\mybatis-spring-1.3.2.jar;C:\Users\zhoux\.m2\repository\com\github\jsqlparser\jsqlparser\1.1\jsqlparser-1.1.jar;C:\Users\zhoux\.m2\repository\org\apache\shiro\shiro-core\1.4.0\shiro-core-1.4.0.jar;C:\Users\zhoux\.m2\repository\org\apache\shiro\shiro-lang\1.4.0\shiro-lang-1.4.0.jar;C:\Users\zhoux\.m2\repository\org\apache\shiro\shiro-cache\1.4.0\shiro-cache-1.4.0.jar;C:\Users\zhoux\.m2\repository\org\apache\shiro\shiro-crypto-hash\1.4.0\shiro-crypto-hash-1.4.0.jar;C:\Users\zhoux\.m2\repository\org\apache\shiro\shiro-crypto-core\1.4.0\shiro-crypto-core-1.4.0.jar;C:\Users\zhoux\.m2\repository\org\apache\shiro\shiro-crypto-cipher\1.4.0\shiro-crypto-cipher-1.4.0.jar;C:\Users\zhoux\.m2\repository\org\apache\shiro\shiro-config-core\1.4.0\shiro-config-core-1.4.0.jar;C:\Users\zhoux\.m2\repository\org\apache\shiro\shiro-config-ogdl\1.4.0\shiro-config-ogdl-1.4.0.jar;C:\Users\zhoux\.m2\repository\org\apache\shiro\shiro-event\1.4.0\shiro-event-1.4.0.jar;C:\Users\zhoux\.m2\repository\org\apache\shiro\shiro-spring\1.4.0\shiro-spring-1.4.0.jar;C:\Users\zhoux\.m2\repository\org\apache\shiro\shiro-cas\1.4.0\shiro-cas-1.4.0.jar;C:\Users\zhoux\.m2\repository\org\jasig\cas\client\cas-client-core\3.2.2\cas-client-core-3.2.2.jar;C:\Users\zhoux\.m2\repository\org\apache\shiro\shiro-web\1.4.0\shiro-web-1.4.0.jar;C:\Users\zhoux\.m2\repository\org\apache\commons\commons-pool2\2.5.0\commons-pool2-2.5.0.jar;C:\Users\zhoux\.m2\repository\net\oschina\j2cache\j2cache-core\2.7.0-release\j2cache-core-2.7.0-release.jar;C:\Users\zhoux\.m2\repository\com\github\ben-manes\caffeine\caffeine\2.6.2\caffeine-2.6.2.jar;C:\Users\zhoux\.m2\repository\com\alibaba\fastjson\1.2.49\fastjson-1.2.49.jar;C:\Users\zhoux\.m2\repository\jline\jline\2.14.2\jline-2.14.2.jar;C:\Users\zhoux\.m2\repository\org\springframework\boot\spring-boot-starter-cache\2.0.6.RELEASE\spring-boot-starter-cache-2.0.6.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\spring-context\5.0.10.RELEASE\spring-context-5.0.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\spring-expression\5.0.10.RELEASE\spring-expression-5.0.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\spring-context-support\5.0.10.RELEASE\spring-context-support-5.0.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\boot\spring-boot-starter-data-redis\2.0.6.RELEASE\spring-boot-starter-data-redis-2.0.6.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\data\spring-data-redis\2.0.11.RELEASE\spring-data-redis-2.0.11.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\data\spring-data-keyvalue\2.0.11.RELEASE\spring-data-keyvalue-2.0.11.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\data\spring-data-commons\2.0.11.RELEASE\spring-data-commons-2.0.11.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\spring-oxm\5.0.10.RELEASE\spring-oxm-5.0.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\io\lettuce\lettuce-core\5.0.5.RELEASE\lettuce-core-5.0.5.RELEASE.jar;C:\Users\zhoux\.m2\repository\io\projectreactor\reactor-core\3.1.10.RELEASE\reactor-core-3.1.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\reactivestreams\reactive-streams\1.0.2\reactive-streams-1.0.2.jar;C:\Users\zhoux\.m2\repository\io\netty\netty-common\4.1.29.Final\netty-common-4.1.29.Final.jar;C:\Users\zhoux\.m2\repository\io\netty\netty-transport\4.1.29.Final\netty-transport-4.1.29.Final.jar;C:\Users\zhoux\.m2\repository\io\netty\netty-buffer\4.1.29.Final\netty-buffer-4.1.29.Final.jar;C:\Users\zhoux\.m2\repository\io\netty\netty-resolver\4.1.29.Final\netty-resolver-4.1.29.Final.jar;C:\Users\zhoux\.m2\repository\io\netty\netty-handler\4.1.29.Final\netty-handler-4.1.29.Final.jar;C:\Users\zhoux\.m2\repository\io\netty\netty-codec\4.1.29.Final\netty-codec-4.1.29.Final.jar;C:\Users\zhoux\.m2\repository\org\springframework\boot\spring-boot-test\2.0.6.RELEASE\spring-boot-test-2.0.6.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\boot\spring-boot\2.0.6.RELEASE\spring-boot-2.0.6.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\boot\spring-boot-starter-web\2.0.6.RELEASE\spring-boot-starter-web-2.0.6.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\boot\spring-boot-starter-json\2.0.6.RELEASE\spring-boot-starter-json-2.0.6.RELEASE.jar;C:\Users\zhoux\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.9.7\jackson-datatype-jdk8-2.9.7.jar;C:\Users\zhoux\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.9.7\jackson-datatype-jsr310-2.9.7.jar;C:\Users\zhoux\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.9.7\jackson-module-parameter-names-2.9.7.jar;C:\Users\zhoux\.m2\repository\org\hibernate\validator\hibernate-validator\6.0.13.Final\hibernate-validator-6.0.13.Final.jar;C:\Users\zhoux\.m2\repository\javax\validation\validation-api\2.0.1.Final\validation-api-2.0.1.Final.jar;C:\Users\zhoux\.m2\repository\org\jboss\logging\jboss-logging\3.3.2.Final\jboss-logging-3.3.2.Final.jar;C:\Users\zhoux\.m2\repository\org\springframework\spring-web\5.0.10.RELEASE\spring-web-5.0.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\spring-webmvc\5.0.10.RELEASE\spring-webmvc-5.0.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\com\jeesite\beetl\2.9-SNAPSHOT\beetl-2.9-SNAPSHOT.jar;C:\Users\zhoux\.m2\repository\org\antlr\antlr4-runtime\4.6\antlr4-runtime-4.6.jar;C:\Users\zhoux\.m2\repository\io\swagger\swagger-annotations\1.5.20\swagger-annotations-1.5.20.jar;C:\Users\zhoux\.m2\repository\org\quartz-scheduler\quartz\2.3.0\quartz-2.3.0.jar;C:\Users\zhoux\.m2\repository\com\mchange\mchange-commons-java\0.2.11\mchange-commons-java-0.2.11.jar;C:\Users\zhoux\.m2\repository\com\jeesite\jeesite-module-swagger\4.1.4-SNAPSHOT\jeesite-module-swagger-4.1.4-SNAPSHOT.jar;C:\Users\zhoux\.m2\repository\io\springfox\springfox-swagger2\2.9.2\springfox-swagger2-2.9.2.jar;C:\Users\zhoux\.m2\repository\io\swagger\swagger-models\1.5.20\swagger-models-1.5.20.jar;C:\Users\zhoux\.m2\repository\io\springfox\springfox-spi\2.9.2\springfox-spi-2.9.2.jar;C:\Users\zhoux\.m2\repository\io\springfox\springfox-core\2.9.2\springfox-core-2.9.2.jar;C:\Users\zhoux\.m2\repository\net\bytebuddy\byte-buddy\1.7.11\byte-buddy-1.7.11.jar;C:\Users\zhoux\.m2\repository\io\springfox\springfox-schema\2.9.2\springfox-schema-2.9.2.jar;C:\Users\zhoux\.m2\repository\io\springfox\springfox-swagger-common\2.9.2\springfox-swagger-common-2.9.2.jar;C:\Users\zhoux\.m2\repository\io\springfox\springfox-spring-web\2.9.2\springfox-spring-web-2.9.2.jar;C:\Users\zhoux\.m2\repository\com\google\guava\guava\20.0\guava-20.0.jar;C:\Users\zhoux\.m2\repository\com\fasterxml\classmate\1.3.4\classmate-1.3.4.jar;C:\Users\zhoux\.m2\repository\org\springframework\plugin\spring-plugin-core\1.2.0.RELEASE\spring-plugin-core-1.2.0.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\spring-aop\5.0.10.RELEASE\spring-aop-5.0.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\plugin\spring-plugin-metadata\1.2.0.RELEASE\spring-plugin-metadata-1.2.0.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\mapstruct\mapstruct\1.2.0.Final\mapstruct-1.2.0.Final.jar;C:\Users\zhoux\.m2\repository\io\springfox\springfox-swagger-ui\2.9.2\springfox-swagger-ui-2.9.2.jar;C:\Users\zhoux\.m2\repository\com\jeesite\jeesite-module-weboffice\4.1.4-SNAPSHOT\jeesite-module-weboffice-4.1.4-SNAPSHOT.jar;C:\Users\zhoux\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\2.0.6.RELEASE\spring-boot-starter-tomcat-2.0.6.RELEASE.jar;C:\Users\zhoux\.m2\repository\javax\annotation\javax.annotation-api\1.3.2\javax.annotation-api-1.3.2.jar;C:\Users\zhoux\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\8.5.34\tomcat-embed-core-8.5.34.jar;C:\Users\zhoux\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\8.5.34\tomcat-embed-el-8.5.34.jar;C:\Users\zhoux\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\8.5.34\tomcat-embed-websocket-8.5.34.jar;C:\Users\zhoux\.m2\repository\mysql\mysql-connector-java\8.0.15\mysql-connector-java-8.0.15.jar;C:\Users\zhoux\.m2\repository\com\google\protobuf\protobuf-java\3.6.1\protobuf-java-3.6.1.jar;C:\Users\zhoux\.m2\repository\javax\servlet\javax.servlet-api\3.1.0\javax.servlet-api-3.1.0.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\zhoux"/>
+    <property name="user.language" value="zh"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="jeesite.initdata" value="true"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_161\jre"/>
+    <property name="basedir" value="E:\wsx\MagicMirrorServer"/>
+    <property name="file.separator" value="\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Users\zhoux\AppData\Local\Temp\surefire1638581149857961025\surefirebooter3262195048285262573.jar"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_161\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_161\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_161\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_161\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_161\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_161\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_161\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_161\jre\classes"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="1.8.0_161-b12"/>
+    <property name="user.name" value="zhoux"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_161\jre\lib\endorsed"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="GBK"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\zhoux\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\zhoux\AppData\Local\Temp\"/>
+    <property name="maven.test.skip" value="false"/>
+    <property name="java.version" value="1.8.0_161"/>
+    <property name="user.dir" value="E:\wsx\MagicMirrorServer"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_161\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Java\jdk1.8.0_161\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;E:\apache-tomcat\apache-tomcat-8.5.34\bin;E:\apache-maven-3.5.4-bin\apache-maven-3.5.4\bin;;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\TortoiseSVN\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Users\zhoux\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\bin;;."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="25.161-b12"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_161\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="52.0"/>
+  </properties>
+  <testcase name="initCoreData" classname="com.jeesite.test.InitCoreData" time="0.126">
+    <error message="Could not open JDBC Connection for transaction; nested exception is java.lang.IllegalStateException: Cannot determine target DataSource for lookup key [null]" type="org.springframework.transaction.CannotCreateTransactionException">org.springframework.transaction.CannotCreateTransactionException: Could not open JDBC Connection for transaction; nested exception is java.lang.IllegalStateException: Cannot determine target DataSource for lookup key [null]
+Caused by: java.lang.IllegalStateException: Cannot determine target DataSource for lookup key [null]
+</error>
+    <system-out><![CDATA[13:22:13.879 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class com.jeesite.test.InitCoreData]
+13:22:13.884 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+13:22:13.891 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+13:22:13.909 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.jeesite.test.InitCoreData] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+13:22:13.920 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.jeesite.test.InitCoreData], using SpringBootContextLoader
+13:22:13.923 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.jeesite.test.InitCoreData]: class path resource [com/jeesite/test/InitCoreData-context.xml] does not exist
+13:22:13.924 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.jeesite.test.InitCoreData]: class path resource [com/jeesite/test/InitCoreDataContext.groovy] does not exist
+13:22:13.924 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.jeesite.test.InitCoreData]: no resource found for suffixes {-context.xml, Context.groovy}.
+13:22:14.127 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@61322f9d, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6ad82709, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@510f3d34, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7817fd62, org.springframework.test.context.transaction.TransactionalTestExecutionListener@8297b3a, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2362f559]
+13:22:14.128 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.jeesite.test.InitCoreData]
+13:22:14.129 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.jeesite.test.InitCoreData]
+13:22:14.130 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.jeesite.test.InitCoreData]
+13:22:14.130 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.jeesite.test.InitCoreData]
+13:22:14.130 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.jeesite.test.InitCoreData]
+13:22:14.130 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.jeesite.test.InitCoreData]
+13:22:14.133 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@4988d8b8 testClass = InitCoreData, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@c0c2f8d testClass = InitCoreData, locations = '{}', classes = '{class com.jeesite.modules.Application, class com.jeesite.modules.Application}', contextInitializerClasses = '[]', activeProfiles = '{test}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@57d5872c, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@157632c9, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@7d68ef40], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+13:22:14.134 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.jeesite.test.InitCoreData]
+13:22:14.134 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.jeesite.test.InitCoreData]
+13:22:14.163 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding PropertySource 'systemProperties' with lowest search precedence
+13:22:14.163 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding PropertySource 'systemEnvironment' with lowest search precedence
+13:22:14.164 [main] DEBUG org.springframework.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [MapPropertySource@1595282218 {name='systemProperties', properties={java.runtime.name=Java(TM) SE Runtime Environment, sun.boot.library.path=C:\Program Files\Java\jdk1.8.0_161\jre\bin, java.vm.version=25.161-b12, java.vm.vendor=Oracle Corporation, java.vendor.url=http://java.oracle.com/, path.separator=;, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, file.encoding.pkg=sun.io, user.country=CN, user.script=, sun.java.launcher=SUN_STANDARD, sun.os.patch.level=, test=com.jeesite.test.InitCoreData, java.vm.specification.name=Java Virtual Machine Specification, user.dir=E:\wsx\MagicMirrorServer, java.runtime.version=1.8.0_161-b12, basedir=E:\wsx\MagicMirrorServer, java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment, java.endorsed.dirs=C:\Program Files\Java\jdk1.8.0_161\jre\lib\endorsed, os.arch=amd64, surefire.real.class.path=C:\Users\zhoux\AppData\Local\Temp\surefire1638581149857961025\surefirebooter3262195048285262573.jar, java.io.tmpdir=C:\Users\zhoux\AppData\Local\Temp\, line.separator=
+, java.vm.specification.vendor=Oracle Corporation, user.variant=, os.name=Windows 10, maven.test.skip=false, sun.jnu.encoding=GBK, java.library.path=C:\Program Files\Java\jdk1.8.0_161\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Java\jdk1.8.0_161\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;E:\apache-tomcat\apache-tomcat-8.5.34\bin;E:\apache-maven-3.5.4-bin\apache-maven-3.5.4\bin;;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\TortoiseSVN\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Users\zhoux\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\bin;;., surefire.test.class.path=E:\wsx\MagicMirrorServer\target\test-classes;E:\wsx\MagicMirrorServer\src\main\webapp\WEB-INF\classes;C:\Users\zhoux\.m2\repository\com\jeesite\jeesite-module-core\4.1.4-SNAPSHOT\jeesite-module-core-4.1.4-SNAPSHOT.jar;C:\Users\zhoux\.m2\repository\com\oracle\ojdbc6\11.2.0.3\ojdbc6-11.2.0.3.jar;C:\Users\zhoux\.m2\repository\net\sourceforge\jtds\jtds\1.3.1\jtds-1.3.1.jar;C:\Users\zhoux\.m2\repository\org\postgresql\postgresql\42.2.5\postgresql-42.2.5.jar;C:\Users\zhoux\.m2\repository\com\jeesite\jeesite-common\4.1.4-SNAPSHOT\jeesite-common-4.1.4-SNAPSHOT.jar;C:\Users\zhoux\.m2\repository\org\apache\commons\commons-lang3\3.7\commons-lang3-3.7.jar;C:\Users\zhoux\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\zhoux\.m2\repository\commons-io\commons-io\2.6\commons-io-2.6.jar;C:\Users\zhoux\.m2\repository\commons-fileupload\commons-fileupload\1.3.3\commons-fileupload-1.3.3.jar;C:\Users\zhoux\.m2\repository\commons-beanutils\commons-beanutils\1.9.3\commons-beanutils-1.9.3.jar;C:\Users\zhoux\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\zhoux\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;C:\Users\zhoux\.m2\repository\org\apache\commons\commons-text\1.3\commons-text-1.3.jar;C:\Users\zhoux\.m2\repository\org\apache\ant\ant\1.9.7\ant-1.9.7.jar;C:\Users\zhoux\.m2\repository\org\apache\ant\ant-launcher\1.9.7\ant-launcher-1.9.7.jar;C:\Users\zhoux\.m2\repository\de\ruedigermoeller\fst\2.57\fst-2.57.jar;C:\Users\zhoux\.m2\repository\org\javassist\javassist\3.21.0-GA\javassist-3.21.0-GA.jar;C:\Users\zhoux\.m2\repository\org\objenesis\objenesis\2.5.1\objenesis-2.5.1.jar;C:\Users\zhoux\.m2\repository\org\json\json\20180130\json-20180130.jar;C:\Users\zhoux\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.9.7\jackson-core-2.9.7.jar;C:\Users\zhoux\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.9.7\jackson-databind-2.9.7.jar;C:\Users\zhoux\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.9.0\jackson-annotations-2.9.0.jar;C:\Users\zhoux\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-xml\2.9.7\jackson-dataformat-xml-2.9.7.jar;C:\Users\zhoux\.m2\repository\com\fasterxml\jackson\module\jackson-module-jaxb-annotations\2.9.7\jackson-module-jaxb-annotations-2.9.7.jar;C:\Users\zhoux\.m2\repository\org\codehaus\woodstox\stax2-api\3.1.4\stax2-api-3.1.4.jar;C:\Users\zhoux\.m2\repository\com\fasterxml\woodstox\woodstox-core\5.0.3\woodstox-core-5.0.3.jar;C:\Users\zhoux\.m2\repository\dom4j\dom4j\1.6.1\dom4j-1.6.1.jar;C:\Users\zhoux\.m2\repository\xml-apis\xml-apis\1.4.01\xml-apis-1.4.01.jar;C:\Users\zhoux\.m2\repository\jaxen\jaxen\1.1.6\jaxen-1.1.6.jar;C:\Users\zhoux\.m2\repository\org\yaml\snakeyaml\1.19\snakeyaml-1.19.jar;C:\Users\zhoux\.m2\repository\org\apache\httpcomponents\httpclient\4.5.6\httpclient-4.5.6.jar;C:\Users\zhoux\.m2\repository\org\apache\httpcomponents\httpcore\4.4.10\httpcore-4.4.10.jar;C:\Users\zhoux\.m2\repository\org\jsoup\jsoup\1.11.3\jsoup-1.11.3.jar;C:\Users\zhoux\.m2\repository\org\apache\commons\commons-email\1.5\commons-email-1.5.jar;C:\Users\zhoux\.m2\repository\com\sun\mail\javax.mail\1.6.2\javax.mail-1.6.2.jar;C:\Users\zhoux\.m2\repository\javax\activation\activation\1.1.1\activation-1.1.1.jar;C:\Users\zhoux\.m2\repository\eu\bitwalker\UserAgentUtils\1.21\UserAgentUtils-1.21.jar;C:\Users\zhoux\.m2\repository\net\coobird\thumbnailator\0.4.8\thumbnailator-0.4.8.jar;C:\Users\zhoux\.m2\repository\com\twelvemonkeys\imageio\imageio-jpeg\3.4.1\imageio-jpeg-3.4.1.jar;C:\Users\zhoux\.m2\repository\com\twelvemonkeys\imageio\imageio-core\3.4.1\imageio-core-3.4.1.jar;C:\Users\zhoux\.m2\repository\com\twelvemonkeys\imageio\imageio-metadata\3.4.1\imageio-metadata-3.4.1.jar;C:\Users\zhoux\.m2\repository\com\twelvemonkeys\common\common-lang\3.4.1\common-lang-3.4.1.jar;C:\Users\zhoux\.m2\repository\com\twelvemonkeys\common\common-io\3.4.1\common-io-3.4.1.jar;C:\Users\zhoux\.m2\repository\com\twelvemonkeys\common\common-image\3.4.1\common-image-3.4.1.jar;C:\Users\zhoux\.m2\repository\com\bladejava\blade-patchca\1.1.0\blade-patchca-1.1.0.jar;C:\Users\zhoux\.m2\repository\org\projectlombok\lombok\1.16.22\lombok-1.16.22.jar;C:\Users\zhoux\.m2\repository\net\sf\jmimemagic\jmimemagic\0.1.5\jmimemagic-0.1.5.jar;C:\Users\zhoux\.m2\repository\com\google\zxing\core\3.3.2\core-3.3.2.jar;C:\Users\zhoux\.m2\repository\com\google\zxing\javase\3.3.2\javase-3.3.2.jar;C:\Users\zhoux\.m2\repository\com\beust\jcommander\1.72\jcommander-1.72.jar;C:\Users\zhoux\.m2\repository\com\github\jai-imageio\jai-imageio-core\1.3.1\jai-imageio-core-1.3.1.jar;C:\Users\zhoux\.m2\repository\org\apache\poi\poi\3.14\poi-3.14.jar;C:\Users\zhoux\.m2\repository\org\apache\poi\poi-ooxml\3.14\poi-ooxml-3.14.jar;C:\Users\zhoux\.m2\repository\com\github\virtuald\curvesapi\1.03\curvesapi-1.03.jar;C:\Users\zhoux\.m2\repository\org\apache\poi\poi-ooxml-schemas\3.14\poi-ooxml-schemas-3.14.jar;C:\Users\zhoux\.m2\repository\org\apache\xmlbeans\xmlbeans\2.6.0\xmlbeans-2.6.0.jar;C:\Users\zhoux\.m2\repository\stax\stax-api\1.0.1\stax-api-1.0.1.jar;C:\Users\zhoux\.m2\repository\org\apache\poi\poi-scratchpad\3.14\poi-scratchpad-3.14.jar;C:\Users\zhoux\.m2\repository\com\belerweb\pinyin4j\2.5.1\pinyin4j-2.5.1.jar;C:\Users\zhoux\.m2\repository\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;C:\Users\zhoux\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.25\jcl-over-slf4j-1.7.25.jar;C:\Users\zhoux\.m2\repository\org\slf4j\jul-to-slf4j\1.7.25\jul-to-slf4j-1.7.25.jar;C:\Users\zhoux\.m2\repository\org\slf4j\log4j-over-slf4j\1.7.25\log4j-over-slf4j-1.7.25.jar;C:\Users\zhoux\.m2\repository\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar;C:\Users\zhoux\.m2\repository\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar;C:\Users\zhoux\.m2\repository\org\springframework\spring-beans\5.0.10.RELEASE\spring-beans-5.0.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\spring-core\5.0.10.RELEASE\spring-core-5.0.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\spring-jcl\5.0.10.RELEASE\spring-jcl-5.0.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\zhoux\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\zhoux\.m2\repository\org\springframework\spring-test\5.0.10.RELEASE\spring-test-5.0.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\com\jeesite\jeesite-framework\4.1.4-SNAPSHOT\jeesite-framework-4.1.4-SNAPSHOT.jar;C:\Users\zhoux\.m2\repository\com\alibaba\druid\1.1.10\druid-1.1.10.jar;C:\Users\zhoux\.m2\repository\org\springframework\spring-jdbc\5.0.10.RELEASE\spring-jdbc-5.0.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\spring-tx\5.0.10.RELEASE\spring-tx-5.0.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\boot\spring-boot-starter-jta-atomikos\2.0.6.RELEASE\spring-boot-starter-jta-atomikos-2.0.6.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\boot\spring-boot-starter\2.0.6.RELEASE\spring-boot-starter-2.0.6.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\2.0.6.RELEASE\spring-boot-autoconfigure-2.0.6.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\boot\spring-boot-starter-logging\2.0.6.RELEASE\spring-boot-starter-logging-2.0.6.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.10.0\log4j-to-slf4j-2.10.0.jar;C:\Users\zhoux\.m2\repository\org\apache\logging\log4j\log4j-api\2.10.0\log4j-api-2.10.0.jar;C:\Users\zhoux\.m2\repository\com\atomikos\transactions-jms\4.0.6\transactions-jms-4.0.6.jar;C:\Users\zhoux\.m2\repository\com\atomikos\transactions-jta\4.0.6\transactions-jta-4.0.6.jar;C:\Users\zhoux\.m2\repository\com\atomikos\transactions-api\4.0.6\transactions-api-4.0.6.jar;C:\Users\zhoux\.m2\repository\com\atomikos\transactions\4.0.6\transactions-4.0.6.jar;C:\Users\zhoux\.m2\repository\com\atomikos\atomikos-util\4.0.6\atomikos-util-4.0.6.jar;C:\Users\zhoux\.m2\repository\com\atomikos\transactions-jdbc\4.0.6\transactions-jdbc-4.0.6.jar;C:\Users\zhoux\.m2\repository\javax\transaction\javax.transaction-api\1.2\javax.transaction-api-1.2.jar;C:\Users\zhoux\.m2\repository\org\aspectj\aspectjrt\1.8.13\aspectjrt-1.8.13.jar;C:\Users\zhoux\.m2\repository\org\aspectj\aspectjweaver\1.8.13\aspectjweaver-1.8.13.jar;C:\Users\zhoux\.m2\repository\org\mybatis\mybatis\3.4.6\mybatis-3.4.6.jar;C:\Users\zhoux\.m2\repository\org\mybatis\mybatis-spring\1.3.2\mybatis-spring-1.3.2.jar;C:\Users\zhoux\.m2\repository\com\github\jsqlparser\jsqlparser\1.1\jsqlparser-1.1.jar;C:\Users\zhoux\.m2\repository\org\apache\shiro\shiro-core\1.4.0\shiro-core-1.4.0.jar;C:\Users\zhoux\.m2\repository\org\apache\shiro\shiro-lang\1.4.0\shiro-lang-1.4.0.jar;C:\Users\zhoux\.m2\repository\org\apache\shiro\shiro-cache\1.4.0\shiro-cache-1.4.0.jar;C:\Users\zhoux\.m2\repository\org\apache\shiro\shiro-crypto-hash\1.4.0\shiro-crypto-hash-1.4.0.jar;C:\Users\zhoux\.m2\repository\org\apache\shiro\shiro-crypto-core\1.4.0\shiro-crypto-core-1.4.0.jar;C:\Users\zhoux\.m2\repository\org\apache\shiro\shiro-crypto-cipher\1.4.0\shiro-crypto-cipher-1.4.0.jar;C:\Users\zhoux\.m2\repository\org\apache\shiro\shiro-config-core\1.4.0\shiro-config-core-1.4.0.jar;C:\Users\zhoux\.m2\repository\org\apache\shiro\shiro-config-ogdl\1.4.0\shiro-config-ogdl-1.4.0.jar;C:\Users\zhoux\.m2\repository\org\apache\shiro\shiro-event\1.4.0\shiro-event-1.4.0.jar;C:\Users\zhoux\.m2\repository\org\apache\shiro\shiro-spring\1.4.0\shiro-spring-1.4.0.jar;C:\Users\zhoux\.m2\repository\org\apache\shiro\shiro-cas\1.4.0\shiro-cas-1.4.0.jar;C:\Users\zhoux\.m2\repository\org\jasig\cas\client\cas-client-core\3.2.2\cas-client-core-3.2.2.jar;C:\Users\zhoux\.m2\repository\org\apache\shiro\shiro-web\1.4.0\shiro-web-1.4.0.jar;C:\Users\zhoux\.m2\repository\org\apache\commons\commons-pool2\2.5.0\commons-pool2-2.5.0.jar;C:\Users\zhoux\.m2\repository\net\oschina\j2cache\j2cache-core\2.7.0-release\j2cache-core-2.7.0-release.jar;C:\Users\zhoux\.m2\repository\com\github\ben-manes\caffeine\caffeine\2.6.2\caffeine-2.6.2.jar;C:\Users\zhoux\.m2\repository\com\alibaba\fastjson\1.2.49\fastjson-1.2.49.jar;C:\Users\zhoux\.m2\repository\jline\jline\2.14.2\jline-2.14.2.jar;C:\Users\zhoux\.m2\repository\org\springframework\boot\spring-boot-starter-cache\2.0.6.RELEASE\spring-boot-starter-cache-2.0.6.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\spring-context\5.0.10.RELEASE\spring-context-5.0.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\spring-expression\5.0.10.RELEASE\spring-expression-5.0.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\spring-context-support\5.0.10.RELEASE\spring-context-support-5.0.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\boot\spring-boot-starter-data-redis\2.0.6.RELEASE\spring-boot-starter-data-redis-2.0.6.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\data\spring-data-redis\2.0.11.RELEASE\spring-data-redis-2.0.11.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\data\spring-data-keyvalue\2.0.11.RELEASE\spring-data-keyvalue-2.0.11.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\data\spring-data-commons\2.0.11.RELEASE\spring-data-commons-2.0.11.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\spring-oxm\5.0.10.RELEASE\spring-oxm-5.0.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\io\lettuce\lettuce-core\5.0.5.RELEASE\lettuce-core-5.0.5.RELEASE.jar;C:\Users\zhoux\.m2\repository\io\projectreactor\reactor-core\3.1.10.RELEASE\reactor-core-3.1.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\reactivestreams\reactive-streams\1.0.2\reactive-streams-1.0.2.jar;C:\Users\zhoux\.m2\repository\io\netty\netty-common\4.1.29.Final\netty-common-4.1.29.Final.jar;C:\Users\zhoux\.m2\repository\io\netty\netty-transport\4.1.29.Final\netty-transport-4.1.29.Final.jar;C:\Users\zhoux\.m2\repository\io\netty\netty-buffer\4.1.29.Final\netty-buffer-4.1.29.Final.jar;C:\Users\zhoux\.m2\repository\io\netty\netty-resolver\4.1.29.Final\netty-resolver-4.1.29.Final.jar;C:\Users\zhoux\.m2\repository\io\netty\netty-handler\4.1.29.Final\netty-handler-4.1.29.Final.jar;C:\Users\zhoux\.m2\repository\io\netty\netty-codec\4.1.29.Final\netty-codec-4.1.29.Final.jar;C:\Users\zhoux\.m2\repository\org\springframework\boot\spring-boot-test\2.0.6.RELEASE\spring-boot-test-2.0.6.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\boot\spring-boot\2.0.6.RELEASE\spring-boot-2.0.6.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\boot\spring-boot-starter-web\2.0.6.RELEASE\spring-boot-starter-web-2.0.6.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\boot\spring-boot-starter-json\2.0.6.RELEASE\spring-boot-starter-json-2.0.6.RELEASE.jar;C:\Users\zhoux\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.9.7\jackson-datatype-jdk8-2.9.7.jar;C:\Users\zhoux\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.9.7\jackson-datatype-jsr310-2.9.7.jar;C:\Users\zhoux\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.9.7\jackson-module-parameter-names-2.9.7.jar;C:\Users\zhoux\.m2\repository\org\hibernate\validator\hibernate-validator\6.0.13.Final\hibernate-validator-6.0.13.Final.jar;C:\Users\zhoux\.m2\repository\javax\validation\validation-api\2.0.1.Final\validation-api-2.0.1.Final.jar;C:\Users\zhoux\.m2\repository\org\jboss\logging\jboss-logging\3.3.2.Final\jboss-logging-3.3.2.Final.jar;C:\Users\zhoux\.m2\repository\org\springframework\spring-web\5.0.10.RELEASE\spring-web-5.0.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\spring-webmvc\5.0.10.RELEASE\spring-webmvc-5.0.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\com\jeesite\beetl\2.9-SNAPSHOT\beetl-2.9-SNAPSHOT.jar;C:\Users\zhoux\.m2\repository\org\antlr\antlr4-runtime\4.6\antlr4-runtime-4.6.jar;C:\Users\zhoux\.m2\repository\io\swagger\swagger-annotations\1.5.20\swagger-annotations-1.5.20.jar;C:\Users\zhoux\.m2\repository\org\quartz-scheduler\quartz\2.3.0\quartz-2.3.0.jar;C:\Users\zhoux\.m2\repository\com\mchange\mchange-commons-java\0.2.11\mchange-commons-java-0.2.11.jar;C:\Users\zhoux\.m2\repository\com\jeesite\jeesite-module-swagger\4.1.4-SNAPSHOT\jeesite-module-swagger-4.1.4-SNAPSHOT.jar;C:\Users\zhoux\.m2\repository\io\springfox\springfox-swagger2\2.9.2\springfox-swagger2-2.9.2.jar;C:\Users\zhoux\.m2\repository\io\swagger\swagger-models\1.5.20\swagger-models-1.5.20.jar;C:\Users\zhoux\.m2\repository\io\springfox\springfox-spi\2.9.2\springfox-spi-2.9.2.jar;C:\Users\zhoux\.m2\repository\io\springfox\springfox-core\2.9.2\springfox-core-2.9.2.jar;C:\Users\zhoux\.m2\repository\net\bytebuddy\byte-buddy\1.7.11\byte-buddy-1.7.11.jar;C:\Users\zhoux\.m2\repository\io\springfox\springfox-schema\2.9.2\springfox-schema-2.9.2.jar;C:\Users\zhoux\.m2\repository\io\springfox\springfox-swagger-common\2.9.2\springfox-swagger-common-2.9.2.jar;C:\Users\zhoux\.m2\repository\io\springfox\springfox-spring-web\2.9.2\springfox-spring-web-2.9.2.jar;C:\Users\zhoux\.m2\repository\com\google\guava\guava\20.0\guava-20.0.jar;C:\Users\zhoux\.m2\repository\com\fasterxml\classmate\1.3.4\classmate-1.3.4.jar;C:\Users\zhoux\.m2\repository\org\springframework\plugin\spring-plugin-core\1.2.0.RELEASE\spring-plugin-core-1.2.0.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\spring-aop\5.0.10.RELEASE\spring-aop-5.0.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\plugin\spring-plugin-metadata\1.2.0.RELEASE\spring-plugin-metadata-1.2.0.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\mapstruct\mapstruct\1.2.0.Final\mapstruct-1.2.0.Final.jar;C:\Users\zhoux\.m2\repository\io\springfox\springfox-swagger-ui\2.9.2\springfox-swagger-ui-2.9.2.jar;C:\Users\zhoux\.m2\repository\com\jeesite\jeesite-module-weboffice\4.1.4-SNAPSHOT\jeesite-module-weboffice-4.1.4-SNAPSHOT.jar;C:\Users\zhoux\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\2.0.6.RELEASE\spring-boot-starter-tomcat-2.0.6.RELEASE.jar;C:\Users\zhoux\.m2\repository\javax\annotation\javax.annotation-api\1.3.2\javax.annotation-api-1.3.2.jar;C:\Users\zhoux\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\8.5.34\tomcat-embed-core-8.5.34.jar;C:\Users\zhoux\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\8.5.34\tomcat-embed-el-8.5.34.jar;C:\Users\zhoux\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\8.5.34\tomcat-embed-websocket-8.5.34.jar;C:\Users\zhoux\.m2\repository\mysql\mysql-connector-java\8.0.15\mysql-connector-java-8.0.15.jar;C:\Users\zhoux\.m2\repository\com\google\protobuf\protobuf-java\3.6.1\protobuf-java-3.6.1.jar;C:\Users\zhoux\.m2\repository\javax\servlet\javax.servlet-api\3.1.0\javax.servlet-api-3.1.0.jar;, java.specification.name=Java Platform API Specification, java.class.version=52.0, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, os.version=10.0, user.home=C:\Users\zhoux, user.timezone=Asia/Shanghai, jeesite.initdata=true, java.awt.printerjob=sun.awt.windows.WPrinterJob, file.encoding=GBK, java.specification.version=1.8, java.class.path=E:\wsx\MagicMirrorServer\target\test-classes;E:\wsx\MagicMirrorServer\src\main\webapp\WEB-INF\classes;C:\Users\zhoux\.m2\repository\com\jeesite\jeesite-module-core\4.1.4-SNAPSHOT\jeesite-module-core-4.1.4-SNAPSHOT.jar;C:\Users\zhoux\.m2\repository\com\oracle\ojdbc6\11.2.0.3\ojdbc6-11.2.0.3.jar;C:\Users\zhoux\.m2\repository\net\sourceforge\jtds\jtds\1.3.1\jtds-1.3.1.jar;C:\Users\zhoux\.m2\repository\org\postgresql\postgresql\42.2.5\postgresql-42.2.5.jar;C:\Users\zhoux\.m2\repository\com\jeesite\jeesite-common\4.1.4-SNAPSHOT\jeesite-common-4.1.4-SNAPSHOT.jar;C:\Users\zhoux\.m2\repository\org\apache\commons\commons-lang3\3.7\commons-lang3-3.7.jar;C:\Users\zhoux\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\zhoux\.m2\repository\commons-io\commons-io\2.6\commons-io-2.6.jar;C:\Users\zhoux\.m2\repository\commons-fileupload\commons-fileupload\1.3.3\commons-fileupload-1.3.3.jar;C:\Users\zhoux\.m2\repository\commons-beanutils\commons-beanutils\1.9.3\commons-beanutils-1.9.3.jar;C:\Users\zhoux\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\zhoux\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;C:\Users\zhoux\.m2\repository\org\apache\commons\commons-text\1.3\commons-text-1.3.jar;C:\Users\zhoux\.m2\repository\org\apache\ant\ant\1.9.7\ant-1.9.7.jar;C:\Users\zhoux\.m2\repository\org\apache\ant\ant-launcher\1.9.7\ant-launcher-1.9.7.jar;C:\Users\zhoux\.m2\repository\de\ruedigermoeller\fst\2.57\fst-2.57.jar;C:\Users\zhoux\.m2\repository\org\javassist\javassist\3.21.0-GA\javassist-3.21.0-GA.jar;C:\Users\zhoux\.m2\repository\org\objenesis\objenesis\2.5.1\objenesis-2.5.1.jar;C:\Users\zhoux\.m2\repository\org\json\json\20180130\json-20180130.jar;C:\Users\zhoux\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.9.7\jackson-core-2.9.7.jar;C:\Users\zhoux\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.9.7\jackson-databind-2.9.7.jar;C:\Users\zhoux\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.9.0\jackson-annotations-2.9.0.jar;C:\Users\zhoux\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-xml\2.9.7\jackson-dataformat-xml-2.9.7.jar;C:\Users\zhoux\.m2\repository\com\fasterxml\jackson\module\jackson-module-jaxb-annotations\2.9.7\jackson-module-jaxb-annotations-2.9.7.jar;C:\Users\zhoux\.m2\repository\org\codehaus\woodstox\stax2-api\3.1.4\stax2-api-3.1.4.jar;C:\Users\zhoux\.m2\repository\com\fasterxml\woodstox\woodstox-core\5.0.3\woodstox-core-5.0.3.jar;C:\Users\zhoux\.m2\repository\dom4j\dom4j\1.6.1\dom4j-1.6.1.jar;C:\Users\zhoux\.m2\repository\xml-apis\xml-apis\1.4.01\xml-apis-1.4.01.jar;C:\Users\zhoux\.m2\repository\jaxen\jaxen\1.1.6\jaxen-1.1.6.jar;C:\Users\zhoux\.m2\repository\org\yaml\snakeyaml\1.19\snakeyaml-1.19.jar;C:\Users\zhoux\.m2\repository\org\apache\httpcomponents\httpclient\4.5.6\httpclient-4.5.6.jar;C:\Users\zhoux\.m2\repository\org\apache\httpcomponents\httpcore\4.4.10\httpcore-4.4.10.jar;C:\Users\zhoux\.m2\repository\org\jsoup\jsoup\1.11.3\jsoup-1.11.3.jar;C:\Users\zhoux\.m2\repository\org\apache\commons\commons-email\1.5\commons-email-1.5.jar;C:\Users\zhoux\.m2\repository\com\sun\mail\javax.mail\1.6.2\javax.mail-1.6.2.jar;C:\Users\zhoux\.m2\repository\javax\activation\activation\1.1.1\activation-1.1.1.jar;C:\Users\zhoux\.m2\repository\eu\bitwalker\UserAgentUtils\1.21\UserAgentUtils-1.21.jar;C:\Users\zhoux\.m2\repository\net\coobird\thumbnailator\0.4.8\thumbnailator-0.4.8.jar;C:\Users\zhoux\.m2\repository\com\twelvemonkeys\imageio\imageio-jpeg\3.4.1\imageio-jpeg-3.4.1.jar;C:\Users\zhoux\.m2\repository\com\twelvemonkeys\imageio\imageio-core\3.4.1\imageio-core-3.4.1.jar;C:\Users\zhoux\.m2\repository\com\twelvemonkeys\imageio\imageio-metadata\3.4.1\imageio-metadata-3.4.1.jar;C:\Users\zhoux\.m2\repository\com\twelvemonkeys\common\common-lang\3.4.1\common-lang-3.4.1.jar;C:\Users\zhoux\.m2\repository\com\twelvemonkeys\common\common-io\3.4.1\common-io-3.4.1.jar;C:\Users\zhoux\.m2\repository\com\twelvemonkeys\common\common-image\3.4.1\common-image-3.4.1.jar;C:\Users\zhoux\.m2\repository\com\bladejava\blade-patchca\1.1.0\blade-patchca-1.1.0.jar;C:\Users\zhoux\.m2\repository\org\projectlombok\lombok\1.16.22\lombok-1.16.22.jar;C:\Users\zhoux\.m2\repository\net\sf\jmimemagic\jmimemagic\0.1.5\jmimemagic-0.1.5.jar;C:\Users\zhoux\.m2\repository\com\google\zxing\core\3.3.2\core-3.3.2.jar;C:\Users\zhoux\.m2\repository\com\google\zxing\javase\3.3.2\javase-3.3.2.jar;C:\Users\zhoux\.m2\repository\com\beust\jcommander\1.72\jcommander-1.72.jar;C:\Users\zhoux\.m2\repository\com\github\jai-imageio\jai-imageio-core\1.3.1\jai-imageio-core-1.3.1.jar;C:\Users\zhoux\.m2\repository\org\apache\poi\poi\3.14\poi-3.14.jar;C:\Users\zhoux\.m2\repository\org\apache\poi\poi-ooxml\3.14\poi-ooxml-3.14.jar;C:\Users\zhoux\.m2\repository\com\github\virtuald\curvesapi\1.03\curvesapi-1.03.jar;C:\Users\zhoux\.m2\repository\org\apache\poi\poi-ooxml-schemas\3.14\poi-ooxml-schemas-3.14.jar;C:\Users\zhoux\.m2\repository\org\apache\xmlbeans\xmlbeans\2.6.0\xmlbeans-2.6.0.jar;C:\Users\zhoux\.m2\repository\stax\stax-api\1.0.1\stax-api-1.0.1.jar;C:\Users\zhoux\.m2\repository\org\apache\poi\poi-scratchpad\3.14\poi-scratchpad-3.14.jar;C:\Users\zhoux\.m2\repository\com\belerweb\pinyin4j\2.5.1\pinyin4j-2.5.1.jar;C:\Users\zhoux\.m2\repository\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;C:\Users\zhoux\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.25\jcl-over-slf4j-1.7.25.jar;C:\Users\zhoux\.m2\repository\org\slf4j\jul-to-slf4j\1.7.25\jul-to-slf4j-1.7.25.jar;C:\Users\zhoux\.m2\repository\org\slf4j\log4j-over-slf4j\1.7.25\log4j-over-slf4j-1.7.25.jar;C:\Users\zhoux\.m2\repository\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar;C:\Users\zhoux\.m2\repository\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar;C:\Users\zhoux\.m2\repository\org\springframework\spring-beans\5.0.10.RELEASE\spring-beans-5.0.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\spring-core\5.0.10.RELEASE\spring-core-5.0.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\spring-jcl\5.0.10.RELEASE\spring-jcl-5.0.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\zhoux\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\zhoux\.m2\repository\org\springframework\spring-test\5.0.10.RELEASE\spring-test-5.0.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\com\jeesite\jeesite-framework\4.1.4-SNAPSHOT\jeesite-framework-4.1.4-SNAPSHOT.jar;C:\Users\zhoux\.m2\repository\com\alibaba\druid\1.1.10\druid-1.1.10.jar;C:\Users\zhoux\.m2\repository\org\springframework\spring-jdbc\5.0.10.RELEASE\spring-jdbc-5.0.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\spring-tx\5.0.10.RELEASE\spring-tx-5.0.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\boot\spring-boot-starter-jta-atomikos\2.0.6.RELEASE\spring-boot-starter-jta-atomikos-2.0.6.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\boot\spring-boot-starter\2.0.6.RELEASE\spring-boot-starter-2.0.6.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\2.0.6.RELEASE\spring-boot-autoconfigure-2.0.6.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\boot\spring-boot-starter-logging\2.0.6.RELEASE\spring-boot-starter-logging-2.0.6.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.10.0\log4j-to-slf4j-2.10.0.jar;C:\Users\zhoux\.m2\repository\org\apache\logging\log4j\log4j-api\2.10.0\log4j-api-2.10.0.jar;C:\Users\zhoux\.m2\repository\com\atomikos\transactions-jms\4.0.6\transactions-jms-4.0.6.jar;C:\Users\zhoux\.m2\repository\com\atomikos\transactions-jta\4.0.6\transactions-jta-4.0.6.jar;C:\Users\zhoux\.m2\repository\com\atomikos\transactions-api\4.0.6\transactions-api-4.0.6.jar;C:\Users\zhoux\.m2\repository\com\atomikos\transactions\4.0.6\transactions-4.0.6.jar;C:\Users\zhoux\.m2\repository\com\atomikos\atomikos-util\4.0.6\atomikos-util-4.0.6.jar;C:\Users\zhoux\.m2\repository\com\atomikos\transactions-jdbc\4.0.6\transactions-jdbc-4.0.6.jar;C:\Users\zhoux\.m2\repository\javax\transaction\javax.transaction-api\1.2\javax.transaction-api-1.2.jar;C:\Users\zhoux\.m2\repository\org\aspectj\aspectjrt\1.8.13\aspectjrt-1.8.13.jar;C:\Users\zhoux\.m2\repository\org\aspectj\aspectjweaver\1.8.13\aspectjweaver-1.8.13.jar;C:\Users\zhoux\.m2\repository\org\mybatis\mybatis\3.4.6\mybatis-3.4.6.jar;C:\Users\zhoux\.m2\repository\org\mybatis\mybatis-spring\1.3.2\mybatis-spring-1.3.2.jar;C:\Users\zhoux\.m2\repository\com\github\jsqlparser\jsqlparser\1.1\jsqlparser-1.1.jar;C:\Users\zhoux\.m2\repository\org\apache\shiro\shiro-core\1.4.0\shiro-core-1.4.0.jar;C:\Users\zhoux\.m2\repository\org\apache\shiro\shiro-lang\1.4.0\shiro-lang-1.4.0.jar;C:\Users\zhoux\.m2\repository\org\apache\shiro\shiro-cache\1.4.0\shiro-cache-1.4.0.jar;C:\Users\zhoux\.m2\repository\org\apache\shiro\shiro-crypto-hash\1.4.0\shiro-crypto-hash-1.4.0.jar;C:\Users\zhoux\.m2\repository\org\apache\shiro\shiro-crypto-core\1.4.0\shiro-crypto-core-1.4.0.jar;C:\Users\zhoux\.m2\repository\org\apache\shiro\shiro-crypto-cipher\1.4.0\shiro-crypto-cipher-1.4.0.jar;C:\Users\zhoux\.m2\repository\org\apache\shiro\shiro-config-core\1.4.0\shiro-config-core-1.4.0.jar;C:\Users\zhoux\.m2\repository\org\apache\shiro\shiro-config-ogdl\1.4.0\shiro-config-ogdl-1.4.0.jar;C:\Users\zhoux\.m2\repository\org\apache\shiro\shiro-event\1.4.0\shiro-event-1.4.0.jar;C:\Users\zhoux\.m2\repository\org\apache\shiro\shiro-spring\1.4.0\shiro-spring-1.4.0.jar;C:\Users\zhoux\.m2\repository\org\apache\shiro\shiro-cas\1.4.0\shiro-cas-1.4.0.jar;C:\Users\zhoux\.m2\repository\org\jasig\cas\client\cas-client-core\3.2.2\cas-client-core-3.2.2.jar;C:\Users\zhoux\.m2\repository\org\apache\shiro\shiro-web\1.4.0\shiro-web-1.4.0.jar;C:\Users\zhoux\.m2\repository\org\apache\commons\commons-pool2\2.5.0\commons-pool2-2.5.0.jar;C:\Users\zhoux\.m2\repository\net\oschina\j2cache\j2cache-core\2.7.0-release\j2cache-core-2.7.0-release.jar;C:\Users\zhoux\.m2\repository\com\github\ben-manes\caffeine\caffeine\2.6.2\caffeine-2.6.2.jar;C:\Users\zhoux\.m2\repository\com\alibaba\fastjson\1.2.49\fastjson-1.2.49.jar;C:\Users\zhoux\.m2\repository\jline\jline\2.14.2\jline-2.14.2.jar;C:\Users\zhoux\.m2\repository\org\springframework\boot\spring-boot-starter-cache\2.0.6.RELEASE\spring-boot-starter-cache-2.0.6.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\spring-context\5.0.10.RELEASE\spring-context-5.0.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\spring-expression\5.0.10.RELEASE\spring-expression-5.0.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\spring-context-support\5.0.10.RELEASE\spring-context-support-5.0.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\boot\spring-boot-starter-data-redis\2.0.6.RELEASE\spring-boot-starter-data-redis-2.0.6.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\data\spring-data-redis\2.0.11.RELEASE\spring-data-redis-2.0.11.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\data\spring-data-keyvalue\2.0.11.RELEASE\spring-data-keyvalue-2.0.11.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\data\spring-data-commons\2.0.11.RELEASE\spring-data-commons-2.0.11.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\spring-oxm\5.0.10.RELEASE\spring-oxm-5.0.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\io\lettuce\lettuce-core\5.0.5.RELEASE\lettuce-core-5.0.5.RELEASE.jar;C:\Users\zhoux\.m2\repository\io\projectreactor\reactor-core\3.1.10.RELEASE\reactor-core-3.1.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\reactivestreams\reactive-streams\1.0.2\reactive-streams-1.0.2.jar;C:\Users\zhoux\.m2\repository\io\netty\netty-common\4.1.29.Final\netty-common-4.1.29.Final.jar;C:\Users\zhoux\.m2\repository\io\netty\netty-transport\4.1.29.Final\netty-transport-4.1.29.Final.jar;C:\Users\zhoux\.m2\repository\io\netty\netty-buffer\4.1.29.Final\netty-buffer-4.1.29.Final.jar;C:\Users\zhoux\.m2\repository\io\netty\netty-resolver\4.1.29.Final\netty-resolver-4.1.29.Final.jar;C:\Users\zhoux\.m2\repository\io\netty\netty-handler\4.1.29.Final\netty-handler-4.1.29.Final.jar;C:\Users\zhoux\.m2\repository\io\netty\netty-codec\4.1.29.Final\netty-codec-4.1.29.Final.jar;C:\Users\zhoux\.m2\repository\org\springframework\boot\spring-boot-test\2.0.6.RELEASE\spring-boot-test-2.0.6.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\boot\spring-boot\2.0.6.RELEASE\spring-boot-2.0.6.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\boot\spring-boot-starter-web\2.0.6.RELEASE\spring-boot-starter-web-2.0.6.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\boot\spring-boot-starter-json\2.0.6.RELEASE\spring-boot-starter-json-2.0.6.RELEASE.jar;C:\Users\zhoux\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.9.7\jackson-datatype-jdk8-2.9.7.jar;C:\Users\zhoux\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.9.7\jackson-datatype-jsr310-2.9.7.jar;C:\Users\zhoux\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.9.7\jackson-module-parameter-names-2.9.7.jar;C:\Users\zhoux\.m2\repository\org\hibernate\validator\hibernate-validator\6.0.13.Final\hibernate-validator-6.0.13.Final.jar;C:\Users\zhoux\.m2\repository\javax\validation\validation-api\2.0.1.Final\validation-api-2.0.1.Final.jar;C:\Users\zhoux\.m2\repository\org\jboss\logging\jboss-logging\3.3.2.Final\jboss-logging-3.3.2.Final.jar;C:\Users\zhoux\.m2\repository\org\springframework\spring-web\5.0.10.RELEASE\spring-web-5.0.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\spring-webmvc\5.0.10.RELEASE\spring-webmvc-5.0.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\com\jeesite\beetl\2.9-SNAPSHOT\beetl-2.9-SNAPSHOT.jar;C:\Users\zhoux\.m2\repository\org\antlr\antlr4-runtime\4.6\antlr4-runtime-4.6.jar;C:\Users\zhoux\.m2\repository\io\swagger\swagger-annotations\1.5.20\swagger-annotations-1.5.20.jar;C:\Users\zhoux\.m2\repository\org\quartz-scheduler\quartz\2.3.0\quartz-2.3.0.jar;C:\Users\zhoux\.m2\repository\com\mchange\mchange-commons-java\0.2.11\mchange-commons-java-0.2.11.jar;C:\Users\zhoux\.m2\repository\com\jeesite\jeesite-module-swagger\4.1.4-SNAPSHOT\jeesite-module-swagger-4.1.4-SNAPSHOT.jar;C:\Users\zhoux\.m2\repository\io\springfox\springfox-swagger2\2.9.2\springfox-swagger2-2.9.2.jar;C:\Users\zhoux\.m2\repository\io\swagger\swagger-models\1.5.20\swagger-models-1.5.20.jar;C:\Users\zhoux\.m2\repository\io\springfox\springfox-spi\2.9.2\springfox-spi-2.9.2.jar;C:\Users\zhoux\.m2\repository\io\springfox\springfox-core\2.9.2\springfox-core-2.9.2.jar;C:\Users\zhoux\.m2\repository\net\bytebuddy\byte-buddy\1.7.11\byte-buddy-1.7.11.jar;C:\Users\zhoux\.m2\repository\io\springfox\springfox-schema\2.9.2\springfox-schema-2.9.2.jar;C:\Users\zhoux\.m2\repository\io\springfox\springfox-swagger-common\2.9.2\springfox-swagger-common-2.9.2.jar;C:\Users\zhoux\.m2\repository\io\springfox\springfox-spring-web\2.9.2\springfox-spring-web-2.9.2.jar;C:\Users\zhoux\.m2\repository\com\google\guava\guava\20.0\guava-20.0.jar;C:\Users\zhoux\.m2\repository\com\fasterxml\classmate\1.3.4\classmate-1.3.4.jar;C:\Users\zhoux\.m2\repository\org\springframework\plugin\spring-plugin-core\1.2.0.RELEASE\spring-plugin-core-1.2.0.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\spring-aop\5.0.10.RELEASE\spring-aop-5.0.10.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\springframework\plugin\spring-plugin-metadata\1.2.0.RELEASE\spring-plugin-metadata-1.2.0.RELEASE.jar;C:\Users\zhoux\.m2\repository\org\mapstruct\mapstruct\1.2.0.Final\mapstruct-1.2.0.Final.jar;C:\Users\zhoux\.m2\repository\io\springfox\springfox-swagger-ui\2.9.2\springfox-swagger-ui-2.9.2.jar;C:\Users\zhoux\.m2\repository\com\jeesite\jeesite-module-weboffice\4.1.4-SNAPSHOT\jeesite-module-weboffice-4.1.4-SNAPSHOT.jar;C:\Users\zhoux\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\2.0.6.RELEASE\spring-boot-starter-tomcat-2.0.6.RELEASE.jar;C:\Users\zhoux\.m2\repository\javax\annotation\javax.annotation-api\1.3.2\javax.annotation-api-1.3.2.jar;C:\Users\zhoux\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\8.5.34\tomcat-embed-core-8.5.34.jar;C:\Users\zhoux\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\8.5.34\tomcat-embed-el-8.5.34.jar;C:\Users\zhoux\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\8.5.34\tomcat-embed-websocket-8.5.34.jar;C:\Users\zhoux\.m2\repository\mysql\mysql-connector-java\8.0.15\mysql-connector-java-8.0.15.jar;C:\Users\zhoux\.m2\repository\com\google\protobuf\protobuf-java\3.6.1\protobuf-java-3.6.1.jar;C:\Users\zhoux\.m2\repository\javax\servlet\javax.servlet-api\3.1.0\javax.servlet-api-3.1.0.jar;, user.name=zhoux, java.vm.specification.version=1.8, sun.java.command=C:\Users\zhoux\AppData\Local\Temp\surefire1638581149857961025\surefirebooter3262195048285262573.jar C:\Users\zhoux\AppData\Local\Temp\surefire1638581149857961025 2019-04-21T13-22-12_532-jvmRun1 surefire6444291504076408377tmp surefire_03516251183759404579tmp, java.home=C:\Program Files\Java\jdk1.8.0_161\jre, sun.arch.data.model=64, user.language=zh, java.specification.vendor=Oracle Corporation, awt.toolkit=sun.awt.windows.WToolkit, java.vm.info=mixed mode, java.version=1.8.0_161, java.ext.dirs=C:\Program Files\Java\jdk1.8.0_161\jre\lib\ext;C:\Windows\Sun\Java\lib\ext, sun.boot.class.path=C:\Program Files\Java\jdk1.8.0_161\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_161\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_161\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_161\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_161\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_161\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_161\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_161\jre\classes, java.vendor=Oracle Corporation, localRepository=C:\Users\zhoux\.m2\repository, file.separator=\, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, sun.io.unicode.encoding=UnicodeLittle, sun.cpu.endian=little, sun.desktop=windows, sun.cpu.isalist=amd64}}, SystemEnvironmentPropertySource@1778081847 {name='systemEnvironment', properties={PATH=C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Java\jdk1.8.0_161\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;E:\apache-tomcat\apache-tomcat-8.5.34\bin;E:\apache-maven-3.5.4-bin\apache-maven-3.5.4\bin;;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\TortoiseSVN\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Users\zhoux\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\bin;, USERDOMAIN_ROAMINGPROFILE=DESKTOP-46F8P2F, PROCESSOR_LEVEL=23, SYSTEMDRIVE=C:, SESSIONNAME=Console, ALLUSERSPROFILE=C:\ProgramData, PROCESSOR_ARCHITECTURE=AMD64, DRIVERDATA=C:\Windows\System32\Drivers\DriverData, =E:=E:\wsx\MagicMirrorServer, MAVEN_HOME=E:\apache-maven-3.5.4-bin\apache-maven-3.5.4\bin\.., PROGRAMFILES=C:\Program Files, PSMODULEPATH=C:\Program Files\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules, PROGRAMDATA=C:\ProgramData, USERNAME=zhoux, WDIR=E:\, ONEDRIVE=C:\Users\zhoux\OneDrive, PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC, ONEDRIVECONSUMER=C:\Users\zhoux\OneDrive, CLASSWORLDS_JAR="E:\apache-maven-3.5.4-bin\apache-maven-3.5.4\bin\..\boot\plexus-classworlds-2.5.2.jar", WINDIR=C:\Windows, HOMEPATH=\Users\zhoux, PROCESSOR_IDENTIFIER=AMD64 Family 23 Model 1 Stepping 1, AuthenticAMD, PUBLIC=C:\Users\Public, =::=::\, LOCALAPPDATA=C:\Users\zhoux\AppData\Local, COMMONPROGRAMFILES(X86)=C:\Program Files (x86)\Common Files, USERDOMAIN=DESKTOP-46F8P2F, LOGONSERVER=\\DESKTOP-46F8P2F, JAVA_HOME=C:\Program Files\Java\jdk1.8.0_161, PROMPT=$P$G, PROGRAMFILES(X86)=C:\Program Files (x86), ERROR_CODE=0, EXEC_DIR=E:\wsx\MagicMirrorServer, INTELLIJ IDEA=C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\bin;, APPDATA=C:\Users\zhoux\AppData\Roaming, PROGRAMW6432=C:\Program Files, SYSTEMROOT=C:\Windows, MAVEN_CMD_LINE_ARGS=clean test -Dmaven.test.skip=false -Dtest=com.jeesite.test.InitCoreData -Djeesite.initdata=true -U, OS=Windows_NT, COMMONPROGRAMW6432=C:\Program Files\Common Files, COMPUTERNAME=DESKTOP-46F8P2F, COMMONPROGRAMFILES=C:\Program Files\Common Files, COMSPEC=C:\Windows\system32\cmd.exe, CATALINA_HOME=E:\apache-tomcat\apache-tomcat-8.5.34, AMDRMPATH=C:\Program Files\AMD\RyzenMaster\, JAVACMD=C:\Program Files\Java\jdk1.8.0_161\bin\java.exe, MAVEN_PROJECTBASEDIR=E:\wsx\MagicMirrorServer, PROCESSOR_REVISION=0101, CLASSWORLDS_LAUNCHER=org.codehaus.plexus.classworlds.launcher.Launcher, TEMP=C:\Users\zhoux\AppData\Local\Temp, HOMEDRIVE=C:, USERPROFILE=C:\Users\zhoux, TMP=C:\Users\zhoux\AppData\Local\Temp, NUMBER_OF_PROCESSORS=16, JVMCONFIG=\.mvn\jvm.config}}]
+13:22:14.171 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding PropertySource 'test' with highest search precedence
+13:22:14.172 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding PropertySource 'configurationProperties' with highest search precedence
+13:22:14.174 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
+13:22:14.174 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding PropertySource 'Inlined Test Properties' with highest search precedence
+04-21 13:22:14.920 INFO  [com.jeesite.test.InitCoreData          ] - Starting InitCoreData on DESKTOP-46F8P2F with PID 16380 (started by zhoux in E:\wsx\MagicMirrorServer)
+04-21 13:22:14.922 DEBUG [com.jeesite.test.InitCoreData          ] - Running with Spring Boot v2.0.6.RELEASE, Spring v5.0.10.RELEASE
+04-21 13:22:14.923 INFO  [com.jeesite.test.InitCoreData          ] - The following profiles are active: test
+04-21 13:22:17.268 INFO  [com.jeesite.common.config.Global       ] - Config files: [classpath:config/jeesite-core.yml, classpath:config/application.yml]
+04-21 13:22:17.269 INFO  [com.jeesite.common.config.Global       ] - Spring cache cluster mode: false, session manager name: J1CacheSession
+04-21 13:22:17.778 INFO  [com.jeesite.common.config.Global       ] - user.home: C:/Users/zhoux
+04-21 13:22:17.778 INFO  [com.jeesite.common.config.Global       ] - user.dir: E:/wsx/MagicMirrorServer
+04-21 13:22:17.778 INFO  [com.jeesite.common.config.Global       ] - logPath: E:/wsx/MagicMirrorServer/target/test-classes
+
+   _____        ___  _   _           ___
+  |_   _|      / __'(_)_| |_        /   |
+  _ | | __  __ \___ | |_   _| __   / /| |
+ ( .| |/__\/__\ ___)| | | |_ /__\ / /_| |_
+  \___|\__.\__.|____|_| \___)\__.(____   _|  :: JeeSite V4.1.4 :: 
+======================================|_|==========================
+
+    欢迎使用 JeeSite Demo V4.1
+
+    您当前的版本为社区版，官方网站：http://jeesite.com
+
+    机器码是：1d4deb468cc2d0b6415b733ac94bbf38
+    产品名称：JeeSite Demo
+    公司名称：ThinkGem
+
+===================================================================
+
+04-21 13:22:18.543 DEBUG [com.jeesite.common.config.Global       ] - Update E:\wsx\MagicMirrorServer\src\main\webapp\WEB-INF\classes\config\application.yml jdbc.password encryption success.
+04-21 13:22:18.764 ERROR [com.alibaba.druid.pool.DruidDataSource ] - init datasource error, url: jdbc:mysql://47.102.147.86:3306/jeesite?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull
+
+java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:835)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:156)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1560)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1623)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:861)
+	at com.jeesite.common.datasource.RoutingDataSource.createDataSource(kv:219)
+	at com.jeesite.common.datasource.RoutingDataSource.createDataSource(kv:195)
+	at com.jeesite.common.datasource.RoutingDataSource.initJeeSiteTargetDataSource(kv:33)
+	at com.jeesite.autoconfigure.core.DataSourceAutoConfiguration.dataSource(ny:9)
+	at com.jeesite.autoconfigure.core.DataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$f9d3df8e.CGLIB$dataSource$0(<generated>)
+	at com.jeesite.autoconfigure.core.DataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$f9d3df8e$$FastClassBySpringCGLIB$$466da96.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:365)
+	at com.jeesite.autoconfigure.core.DataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$f9d3df8e.dataSource(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:583)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1246)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1096)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1135)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1062)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:819)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:725)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:475)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1246)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1096)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:367)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:110)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1597)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1349)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:572)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1135)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1062)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:581)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:370)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:572)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:759)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:548)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:386)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:127)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:379)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:340)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413)
+
+04-21 13:22:18.775 ERROR [com.alibaba.druid.pool.DruidDataSource ] - {dataSource-1} init error
+
+java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:835)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:156)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1560)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1623)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:861)
+	at com.jeesite.common.datasource.RoutingDataSource.createDataSource(kv:219)
+	at com.jeesite.common.datasource.RoutingDataSource.createDataSource(kv:195)
+	at com.jeesite.common.datasource.RoutingDataSource.initJeeSiteTargetDataSource(kv:33)
+	at com.jeesite.autoconfigure.core.DataSourceAutoConfiguration.dataSource(ny:9)
+	at com.jeesite.autoconfigure.core.DataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$f9d3df8e.CGLIB$dataSource$0(<generated>)
+	at com.jeesite.autoconfigure.core.DataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$f9d3df8e$$FastClassBySpringCGLIB$$466da96.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:365)
+	at com.jeesite.autoconfigure.core.DataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$f9d3df8e.dataSource(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:583)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1246)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1096)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1135)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1062)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:819)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:725)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:475)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1246)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1096)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:367)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:110)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1597)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1349)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:572)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1135)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1062)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:581)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:370)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:572)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:759)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:548)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:386)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:127)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:379)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:340)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413)
+
+04-21 13:22:18.778 ERROR [c.j.common.datasource.RoutingDataSource] - Init target data source error: default
+
+java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:835)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:156)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1560)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1623)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:861)
+	at com.jeesite.common.datasource.RoutingDataSource.createDataSource(kv:219)
+	at com.jeesite.common.datasource.RoutingDataSource.createDataSource(kv:195)
+	at com.jeesite.common.datasource.RoutingDataSource.initJeeSiteTargetDataSource(kv:33)
+	at com.jeesite.autoconfigure.core.DataSourceAutoConfiguration.dataSource(ny:9)
+	at com.jeesite.autoconfigure.core.DataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$f9d3df8e.CGLIB$dataSource$0(<generated>)
+	at com.jeesite.autoconfigure.core.DataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$f9d3df8e$$FastClassBySpringCGLIB$$466da96.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:365)
+	at com.jeesite.autoconfigure.core.DataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$f9d3df8e.dataSource(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:583)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1246)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1096)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1135)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1062)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:819)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:725)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:475)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1246)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1096)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:367)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:110)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1597)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1349)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:572)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1135)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1062)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:581)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:370)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:572)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:759)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:548)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:386)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:127)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:379)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:340)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413)
+
+04-21 13:22:18.855 ERROR [com.alibaba.druid.pool.DruidDataSource ] - create connection SQLException, url: jdbc:mysql://47.102.147.86:3306/jeesite?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull, errorCode 0, state 08001
+
+java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:835)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:156)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1560)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1623)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2468)
+
+04-21 13:22:18.930 ERROR [com.alibaba.druid.pool.DruidDataSource ] - create connection SQLException, url: jdbc:mysql://47.102.147.86:3306/jeesite?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull, errorCode 0, state 08001
+
+java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:835)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:156)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1560)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1623)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2468)
+
+04-21 13:22:19.503 ERROR [com.alibaba.druid.pool.DruidDataSource ] - create connection SQLException, url: jdbc:mysql://47.102.147.86:3306/jeesite?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull, errorCode 0, state 08001
+
+java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:835)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:156)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1560)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1623)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2468)
+
+04-21 13:22:20.069 ERROR [com.alibaba.druid.pool.DruidDataSource ] - create connection SQLException, url: jdbc:mysql://47.102.147.86:3306/jeesite?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull, errorCode 0, state 08001
+
+java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:835)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:156)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1560)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1623)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2468)
+
+04-21 13:22:20.633 ERROR [com.alibaba.druid.pool.DruidDataSource ] - create connection SQLException, url: jdbc:mysql://47.102.147.86:3306/jeesite?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull, errorCode 0, state 08001
+
+java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:835)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:156)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1560)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1623)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2468)
+
+04-21 13:22:21.194 ERROR [com.alibaba.druid.pool.DruidDataSource ] - create connection SQLException, url: jdbc:mysql://47.102.147.86:3306/jeesite?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull, errorCode 0, state 08001
+
+java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:835)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:156)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1560)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1623)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2468)
+
+04-21 13:22:21.754 ERROR [com.alibaba.druid.pool.DruidDataSource ] - create connection SQLException, url: jdbc:mysql://47.102.147.86:3306/jeesite?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull, errorCode 0, state 08001
+
+java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:835)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:156)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1560)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1623)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2468)
+
+04-21 13:22:22.327 ERROR [com.alibaba.druid.pool.DruidDataSource ] - create connection SQLException, url: jdbc:mysql://47.102.147.86:3306/jeesite?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull, errorCode 0, state 08001
+
+java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:835)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:156)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1560)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1623)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2468)
+
+04-21 13:22:22.902 ERROR [com.alibaba.druid.pool.DruidDataSource ] - create connection SQLException, url: jdbc:mysql://47.102.147.86:3306/jeesite?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull, errorCode 0, state 08001
+
+java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:835)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:156)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1560)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1623)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2468)
+
+04-21 13:22:23.479 ERROR [com.alibaba.druid.pool.DruidDataSource ] - create connection SQLException, url: jdbc:mysql://47.102.147.86:3306/jeesite?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull, errorCode 0, state 08001
+
+java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:835)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:156)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1560)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1623)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2468)
+
+04-21 13:22:24.056 ERROR [com.alibaba.druid.pool.DruidDataSource ] - create connection SQLException, url: jdbc:mysql://47.102.147.86:3306/jeesite?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull, errorCode 0, state 08001
+
+java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:835)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:156)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1560)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1623)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2468)
+
+04-21 13:22:24.427 DEBUG [com.jeesite.common.beetl.BeetlUtils    ] - Beetl config files: [classpath:/config/beetl-core.properties, classpath:/config/beetl.properties]
+04-21 13:22:24.640 ERROR [com.alibaba.druid.pool.DruidDataSource ] - create connection SQLException, url: jdbc:mysql://47.102.147.86:3306/jeesite?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull, errorCode 0, state 08001
+
+java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:835)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:156)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1560)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1623)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2468)
+
+04-21 13:22:25.202 ERROR [com.alibaba.druid.pool.DruidDataSource ] - create connection SQLException, url: jdbc:mysql://47.102.147.86:3306/jeesite?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull, errorCode 0, state 08001
+
+java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:835)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:156)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1560)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1623)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2468)
+
+04-21 13:22:25.766 ERROR [com.alibaba.druid.pool.DruidDataSource ] - create connection SQLException, url: jdbc:mysql://47.102.147.86:3306/jeesite?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull, errorCode 0, state 08001
+
+java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:835)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:156)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1560)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1623)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2468)
+
+04-21 13:22:26.340 ERROR [com.alibaba.druid.pool.DruidDataSource ] - create connection SQLException, url: jdbc:mysql://47.102.147.86:3306/jeesite?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull, errorCode 0, state 08001
+
+java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:835)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:156)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1560)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1623)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2468)
+
+04-21 13:22:26.927 ERROR [com.alibaba.druid.pool.DruidDataSource ] - create connection SQLException, url: jdbc:mysql://47.102.147.86:3306/jeesite?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull, errorCode 0, state 08001
+
+java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:835)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:156)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1560)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1623)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2468)
+
+04-21 13:22:27.488 ERROR [com.alibaba.druid.pool.DruidDataSource ] - create connection SQLException, url: jdbc:mysql://47.102.147.86:3306/jeesite?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull, errorCode 0, state 08001
+
+java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:835)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:156)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1560)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1623)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2468)
+
+04-21 13:22:27.529 INFO  [com.jeesite.test.InitCoreData          ] - Started InitCoreData in 13.343 seconds (JVM running for 14.245)
+04-21 13:22:27.595 WARN  [o.s.aop.framework.CglibAopProxy        ] - Unable to proxy interface-implementing method [public final void org.springframework.test.context.junit4.AbstractJUnit4SpringContextTests.setApplicationContext(org.springframework.context.ApplicationContext)] because it is marked as final: Consider using interface-based JDK proxies instead!
+04-21 13:22:27.633 WARN  [o.s.test.context.TestContextManager    ] - Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener@8297b3a] for test method [public void com.jeesite.test.InitCoreData.initCoreData() throws java.lang.Exception] and test instance [com.jeesite.test.InitCoreData@4a304820]
+
+org.springframework.transaction.CannotCreateTransactionException: Could not open JDBC Connection for transaction; nested exception is java.lang.IllegalStateException: Cannot determine target DataSource for lookup key [null]
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:305)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:378)
+	at org.springframework.test.context.transaction.TransactionContext.startTransaction(TransactionContext.java:103)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.beforeTestMethod(TransactionalTestExecutionListener.java:192)
+	at org.springframework.test.context.TestContextManager.beforeTestMethod(TestContextManager.java:291)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:74)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:379)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:340)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413)
+Caused by: java.lang.IllegalStateException: Cannot determine target DataSource for lookup key [null]
+	at org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource.determineTargetDataSource(AbstractRoutingDataSource.java:207)
+	at org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource.getConnection(AbstractRoutingDataSource.java:169)
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:262)
+	... 28 common frames omitted
+
+04-21 13:22:27.635 INFO  [com.jeesite.test.InitCoreData          ] - ===== Test After ============================== 耗时：18007天5时22分27秒
+]]></system-out>
+  </testcase>
+</testsuite>

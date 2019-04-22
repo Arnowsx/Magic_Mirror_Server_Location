@@ -1,76 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.magicmirror.dao.DeviceInfoDao">
-  <resultMap id="BaseResultMap" type="com.magicmirror.entity.DeviceInfo">
-    <id column="device_id" jdbcType="INTEGER" property="deviceId" />
-    <result column="name" jdbcType="VARCHAR" property="name" />
-    <result column="device_mac" jdbcType="VARCHAR" property="deviceMac" />
-    <result column="device_type" jdbcType="INTEGER" property="deviceType" />
-  </resultMap>
-  <sql id="Base_Column_List">
-    device_id, `name`, device_mac, device_type
+
+    <sql id="deviceInfoColumns">
+    a.device_id as deviceId,
+    a.name as 'name',
+    a.device_mac as deviceMac,
+    a.device_type as deviceType,
+    a.device_status as deviceStatus
   </sql>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select 
-    <include refid="Base_Column_List" />
-    from device_info_table
-    where device_id = #{deviceId,jdbcType=INTEGER}
-  </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
-    delete from device_info_table
-    where device_id = #{deviceId,jdbcType=INTEGER}
-  </delete>
-  <insert id="insert" keyColumn="device_id" keyProperty="deviceId" parameterType="com.magicmirror.entity.DeviceInfo" useGeneratedKeys="true">
-    insert into device_info_table (`name`, device_mac, device_type
-      )
-    values (#{name,jdbcType=VARCHAR}, #{deviceMac,jdbcType=VARCHAR}, #{deviceType,jdbcType=INTEGER}
-      )
-  </insert>
-  <insert id="insertSelective" keyColumn="device_id" keyProperty="deviceId" parameterType="com.magicmirror.entity.DeviceInfo" useGeneratedKeys="true">
-    insert into device_info_table
-    <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="name != null">
-        `name`,
-      </if>
-      <if test="deviceMac != null">
+
+    <sql id="deviceInfoLeftJoins">
+
+    </sql>
+
+    <select id="findList" resultType="com.magicmirror.entity.DeviceInfo">
+        SELECT
+        <include refid="deviceInfoColumns"/>
+        FROM device_info_table a
+        <include refid="deviceInfoLeftJoins"/>
+        <where>
+            1=1
+            <if test="deviceId != null and deviceId != ''">
+                AND a.device_id = #{deviceId}
+            </if>
+            <if test="name != null and name != ''">
+                AND a.name = #{name}
+            </if>
+            <if test="deviceMac != null and deviceMac != ''">
+                AND device_mac = #{deviceMac}
+            </if>
+            <if test="deviceType != null and deviceType != ''">
+                AND device_type = #{deviceType}
+            </if>
+            <if test="deviceStatus != null and deviceStatus != ''">
+                AND device_status = #{deviceStatus}
+            </if>
+        </where>
+    </select>
+
+    <insert id="insert">
+    INSERT INTO device_info_table(
+        name,
         device_mac,
-      </if>
-      <if test="deviceType != null">
         device_type,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="name != null">
-        #{name,jdbcType=VARCHAR},
-      </if>
-      <if test="deviceMac != null">
-        #{deviceMac,jdbcType=VARCHAR},
-      </if>
-      <if test="deviceType != null">
-        #{deviceType,jdbcType=INTEGER},
-      </if>
-    </trim>
+        device_status
+    ) VALUES (
+        #{name},
+        #{deviceMac}
+        #{deviceType},
+        #{deviceStatus}
+    )
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.magicmirror.entity.DeviceInfo">
-    update device_info_table
-    <set>
-      <if test="name != null">
-        `name` = #{name,jdbcType=VARCHAR},
-      </if>
-      <if test="deviceMac != null">
-        device_mac = #{deviceMac,jdbcType=VARCHAR},
-      </if>
-      <if test="deviceType != null">
-        device_type = #{deviceType,jdbcType=INTEGER},
-      </if>
-    </set>
-    where device_id = #{deviceId,jdbcType=INTEGER}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="com.magicmirror.entity.DeviceInfo">
-    update device_info_table
-    set `name` = #{name,jdbcType=VARCHAR},
-      device_mac = #{deviceMac,jdbcType=VARCHAR},
-      device_type = #{deviceType,jdbcType=INTEGER}
-    where device_id = #{deviceId,jdbcType=INTEGER}
-  </update>
+
+    <update id="update">
+        UPDATE device_info_table SET
+        name = #{name},
+        device_mac = #{deviceMac},
+        device_type = #{deviceType},
+        device_status = #{deviceStatus}
+        <where>
+            device_id = #{deviceId}
+        </where>
+    </update>
+
+    <delete id="delete">
+        DELETE FROM device_info_table
+        <where>
+            device_id = #{id}
+        </where>
+    </delete>
+
+    <select id="isOnline" resultType="boolean">
+        SELECT 1
+        FROM device_info_table a
+            <include refid="deviceInfoLeftJoins"/>
+        <where>
+            device_id = #{id}
+            AND device_status = 'ONLINE'
+        </where>
+    </select>
 </mapper>

@@ -8,6 +8,32 @@
   <sql id="Base_Column_List">
     type_id, `type`
   </sql>
+
+  <sql id="deviceTypeColumns">
+    a.type_id as typeId,
+    a.type as type
+  </sql>
+
+  <sql id="deviceTypeLeftJoins">
+
+  </sql>
+
+  <select id="findList" resultType="com.magicmirror.entity.DeviceType">
+    SELECT
+        <include refid="deviceTypeColumns"/>
+    FROM device_type_table a
+        <include refid="deviceTypeLeftJoins"/>
+    <where>
+      1=1
+      <if test="typeId != '' and typeId != null">
+        AND a.type_id = #{typeId}
+      </if>
+      <if test="type != '' and type != null">
+        AND a.type = #{type}
+      </if>
+    </where>
+  </select>
+
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
@@ -49,4 +75,8 @@
     set `type` = #{type,jdbcType=VARCHAR}
     where type_id = #{typeId,jdbcType=INTEGER}
   </update>
+  <delete id="delete">
+    DELETE FROM  device_type_table
+    where type_id = #{id}
+  </delete>
 </mapper>

@@ -2,16 +2,17 @@ package com.magicmirror.dao;
 
 import com.magicmirror.entity.DeviceInfo;
 
+import java.util.List;
+
 public interface DeviceInfoDao {
-    int deleteByPrimaryKey(Integer deviceId);
 
-    int insert(DeviceInfo record);
+    List<DeviceInfo> findList(DeviceInfo entity);
 
-    int insertSelective(DeviceInfo record);
+    void insert(DeviceInfo entity);
 
-    DeviceInfo selectByPrimaryKey(Integer deviceId);
+    void update(DeviceInfo entity);
 
-    int updateByPrimaryKeySelective(DeviceInfo record);
+    void delete(int id);
 
-    int updateByPrimaryKey(DeviceInfo record);
+    boolean isOnline(int id);
 }

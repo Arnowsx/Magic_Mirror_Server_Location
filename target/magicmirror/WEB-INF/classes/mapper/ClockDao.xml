@@ -10,6 +10,36 @@
   <sql id="Base_Column_List">
     clock_id, `time`, `status`, device_id
   </sql>
+
+  <sql id="clockColumns">
+    a.clock_id as clockId,
+    a.time as time,
+    a.status as status,
+    a.device_id as deviceId
+  </sql>
+
+  <sql id="clockLeftJoins">
+  </sql>
+
+  <select id="findList" resultType="com.magicmirror.entity.Clock">
+    SELECT
+        <include refid="clockColumns"/>
+    FROM clock_table a
+        <include refid="clockLeftJoins"/>
+    <where>
+      1=1
+      <if test="clockId != null and clockId != ''">
+        AND a.clock_id = #{clockId}
+      </if>
+      <if test="status != null and status != ''">
+        AND a.status = #{status}
+      </if>
+      <if test="deviceId != null and deviceId != ''">
+        AND a.device_id = #{deviceId}
+      </if>
+    </where>
+  </select>
+
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
@@ -73,4 +103,11 @@
       device_id = #{deviceId,jdbcType=INTEGER}
     where clock_id = #{clockId,jdbcType=INTEGER}
   </update>
+
+  <delete id="delete">
+    DELETE FROM clock_table
+    <where>
+      clock_id = #{clockId}
+    </where>
+  </delete>
 </mapper>

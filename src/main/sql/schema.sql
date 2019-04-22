@@ -12,6 +12,7 @@ CREATE TABLE device_info_table(
                                   `name` varchar(20) NOT NULL COMMENT '设备名称',
                                   `device_mac` varchar(20) NOT NULL COMMENT '设备MAC地址',
                                   `device_type` int NOT NULL COMMENT '设备类型',
+                                  `device_type` enum('ONLINE', 'OFFLINE') NOT NULL COMMENT '设备状态',
                                   PRIMARY KEY (`device_id`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

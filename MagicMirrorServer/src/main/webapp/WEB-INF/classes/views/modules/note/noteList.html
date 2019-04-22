@@ -1,0 +1,78 @@
+<% layout('/layouts/default.html', {title: '日志管理', libs: ['dataGrid']}){ %>
+<div class="main-content">
+	<div class="box box-main">
+		<div class="box-header">
+			<div class="box-title">
+				<i class="fa fa-list-alt"></i> ${text('日志管理')}
+			</div>
+			<div class="box-tools pull-right">
+				<a href="#" class="btn btn-default" id="btnSearch" title="${text('查询')}"><i class="fa fa-filter"></i> ${text('查询')}</a>
+				<% if(hasPermi('note:note:edit')){ %>
+					<a href="${ctx}/note/note/form" class="btn btn-default btnTool" title="${text('新增日志')}"><i class="fa fa-plus"></i> ${text('新增')}</a>
+				<% } %>
+			</div>
+		</div>
+		<div class="box-body">
+			<#form:form id="searchForm" model="${note}" action="${ctx}/note/note/listData" method="post" class="form-inline hide"
+					data-page-no="${parameter.pageNo}" data-page-size="${parameter.pageSize}" data-order-by="${parameter.orderBy}">
+				<div class="form-group">
+					<label class="control-label">${text('日志ID')}：</label>
+				</div>
+				<div class="form-group">
+					<label class="control-label">${text('保存时间')}：</label>
+					<div class="control-inline">
+						<#form:input path="saveTime_gte" readonly="true" maxlength="20" class="form-control Wdate-datetime"
+							dataFormat="datetime" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm',isShowClear:false,onpicked:function(){saveTime_lte.click()}});"/>
+						&nbsp;--&nbsp;
+						<#form:input path="saveTime_lte" readonly="true" maxlength="20" class="form-control Wdate-datetime"
+							dataFormat="datetime" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm',isShowClear:false});"/>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label">${text('日志内容')}：</label>
+					<div class="control-inline">
+						<#form:input path="text" maxlength="1000" class="form-control width-120"/>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label">${text('设备id')}：</label>
+					<div class="control-inline">
+						<#form:input path="deviceId" maxlength="11" class="form-control width-120"/>
+					</div>
+				</div>
+				<div class="form-group">
+					<button type="submit" class="btn btn-primary btn-sm">${text('查询')}</button>
+					<button type="reset" class="btn btn-default btn-sm">${text('重置')}</button>
+				</div>
+			</#form:form>
+			<table id="dataGrid"></table>
+			<div id="dataGridPage"></div>
+		</div>
+	</div>
+</div>
+<% } %>
+<script>
+// 初始化DataGrid对象
+$('#dataGrid').dataGrid({
+	searchForm: $("#searchForm"),
+	columnModel: [
+		{header:'${text("保存时间")}', name:'saveTime', index:'a.save_time', width:150, align:"left", frozen:true, formatter: function(val, obj, row, act){
+			return '<a href="${ctx}/note/note/form?noteId='+row.noteId+'" class="btnList" data-title="${text("编辑日志")}">'+(val||row.id)+'</a>';
+		}},
+		{header:'${text("日志内容")}', name:'text', index:'a.text', width:150, align:"left"},
+		{header:'${text("设备id")}', name:'deviceId', index:'a.device_id', width:150, align:"center"},
+		{header:'${text("操作")}', name:'actions', width:120, sortable:false, title:false, formatter: function(val, obj, row, act){
+			var actions = [];
+			<% if(hasPermi('note:note:edit')){ %>
+				actions.push('<a href="${ctx}/note/note/form?noteId='+row.noteId+'" class="btnList" title="${text("编辑日志")}"><i class="fa fa-pencil"></i></a>&nbsp;');
+				actions.push('<a href="${ctx}/note/note/delete?noteId='+row.noteId+'" class="btnList" title="${text("删除日志")}" data-confirm="${text("确认要删除该日志吗？")}"><i class="fa fa-trash-o"></i></a>&nbsp;');
+			<% } %>
+			return actions.join('');
+		}}
+	],
+	// 加载成功后执行事件
+	ajaxSuccess: function(data){
+		
+	}
+});
+</script>

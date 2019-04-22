@@ -1,0 +1,77 @@
+<% layout('/layouts/default.html', {title: '闹钟管理', libs: ['dataGrid']}){ %>
+<div class="main-content">
+	<div class="box box-main">
+		<div class="box-header">
+			<div class="box-title">
+				<i class="fa fa-list-alt"></i> ${text('闹钟管理')}
+			</div>
+			<div class="box-tools pull-right">
+				<a href="#" class="btn btn-default" id="btnSearch" title="${text('查询')}"><i class="fa fa-filter"></i> ${text('查询')}</a>
+				<% if(hasPermi('clock:clock:edit')){ %>
+					<a href="${ctx}/clock/clock/form" class="btn btn-default btnTool" title="${text('新增闹钟')}"><i class="fa fa-plus"></i> ${text('新增')}</a>
+				<% } %>
+			</div>
+		</div>
+		<div class="box-body">
+			<#form:form id="searchForm" model="${clock}" action="${ctx}/clock/clock/listData" method="post" class="form-inline hide"
+					data-page-no="${parameter.pageNo}" data-page-size="${parameter.pageSize}" data-order-by="${parameter.orderBy}">
+				<div class="form-group">
+					<label class="control-label">${text('闹钟ID')}：</label>
+				</div>
+				<div class="form-group">
+					<label class="control-label">${text('闹钟设置时间')}：</label>
+					<div class="control-inline">
+						<#form:input path="time" readonly="true" maxlength="20" class="form-control Wdate-datetime"
+							dataFormat="datetime" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm',isShowClear:false});"/>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label">${text('是否启用')}：</label>
+					<div class="control-inline width-120">
+						<#form:select path="clockStatus" dictType="clock_status" blankOption="true" class="form-control"/>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label">${text('设备ID')}：</label>
+					<div class="control-inline">
+						<#form:input path="deviceId" maxlength="11" class="form-control width-120"/>
+					</div>
+				</div>
+				<div class="form-group">
+					<button type="submit" class="btn btn-primary btn-sm">${text('查询')}</button>
+					<button type="reset" class="btn btn-default btn-sm">${text('重置')}</button>
+				</div>
+			</#form:form>
+			<table id="dataGrid"></table>
+			<div id="dataGridPage"></div>
+		</div>
+	</div>
+</div>
+<% } %>
+<script>
+// 初始化DataGrid对象
+$('#dataGrid').dataGrid({
+	searchForm: $("#searchForm"),
+	columnModel: [
+		{header:'${text("闹钟设置时间")}', name:'time', index:'a.time', width:150, align:"left", frozen:true, formatter: function(val, obj, row, act){
+			return '<a href="${ctx}/clock/clock/form?clockId='+row.clockId+'" class="btnList" data-title="${text("编辑闹钟")}">'+(val||row.id)+'</a>';
+		}},
+		{header:'${text("是否启用")}', name:'clockStatus', index:'a.status', width:150, align:"center", formatter: function(val, obj, row, act){
+			return js.getDictLabel(${@DictUtils.getDictListJson('clock_status')}, val, '${text("未知")}', true);
+		}},
+		{header:'${text("设备ID")}', name:'deviceId', index:'a.device_id', width:150, align:"center"},
+		{header:'${text("操作")}', name:'actions', width:120, sortable:false, title:false, formatter: function(val, obj, row, act){
+			var actions = [];
+			<% if(hasPermi('clock:clock:edit')){ %>
+				actions.push('<a href="${ctx}/clock/clock/form?clockId='+row.clockId+'" class="btnList" title="${text("编辑闹钟")}"><i class="fa fa-pencil"></i></a>&nbsp;');
+				actions.push('<a href="${ctx}/clock/clock/delete?clockId='+row.clockId+'" class="btnList" title="${text("删除闹钟")}" data-confirm="${text("确认要删除该闹钟吗？")}"><i class="fa fa-trash-o"></i></a>&nbsp;');
+			<% } %>
+			return actions.join('');
+		}}
+	],
+	// 加载成功后执行事件
+	ajaxSuccess: function(data){
+		
+	}
+});
+</script>

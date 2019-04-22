@@ -2,7 +2,11 @@ package com.magicmirror.dao;
 
 import com.magicmirror.entity.DeviceType;
 
+import java.util.List;
+
 public interface DeviceTypeDao {
+    List<DeviceType> findList(DeviceType entity);
+
     int deleteByPrimaryKey(Integer typeId);
 
     int insert(DeviceType record);
@@ -14,4 +18,6 @@ public interface DeviceTypeDao {
     int updateByPrimaryKeySelective(DeviceType record);
 
     int updateByPrimaryKey(DeviceType record);
+
+    void delete(int id);
 }

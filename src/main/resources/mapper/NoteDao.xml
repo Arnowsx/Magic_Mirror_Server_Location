@@ -10,6 +10,36 @@
   <sql id="Base_Column_List">
     note_id, save_time, `text`, device_id
   </sql>
+
+  <sql id="noteColumns">
+    a.note_id as noteId,
+    a.save_time as saveTime,
+    a.text as text,
+    a.device_id as deviceId
+  </sql>
+
+  <sql id="noteLeftJoins">
+
+  </sql>
+
+  <select id="findList" resultType="com.magicmirror.entity.Note">
+    SELECT
+        <include refid="noteColumns"/>
+    FROM note_table a
+        <include refid="noteLeftJoins"/>
+    <where>
+        1=1
+        <if test="noteId != null and noteId != ''">
+            AND a.note_id = #{noteId}
+        </if>
+        <if test="text != null and text != ''">
+            AND a.text LIKE #{text}
+        </if>
+        <if test="deviceId != null and deviceId != ''">
+            AND a.device_id = #{deviceId}
+        </if>
+    </where>
+  </select>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
@@ -73,4 +103,9 @@
       device_id = #{deviceId,jdbcType=INTEGER}
     where note_id = #{noteId,jdbcType=INTEGER}
   </update>
+
+  <delete id="delete">
+    DELETE FROM note_table
+    where note_id = #{id}
+  </delete>
 </mapper>
