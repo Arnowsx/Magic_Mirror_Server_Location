@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="magic_mirror_database@localhost" uuid="66218c35-69a3-4fa7-9bb2-74c904bc51e6">
+    <data-source source="LOCAL" name="magic_mirror_database@192.168.0.102" uuid="f80a8276-0b19-44d3-8fa0-7522cee0ea78">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/magic_mirror_database?serverTimezone=GMT</jdbc-url>
+      <jdbc-url>jdbc:mysql://192.168.0.102:3306/magic_mirror_database?serverTimezone=GMT</jdbc-url>
       <driver-properties>
         <property name="autoReconnect" value="true" />
         <property name="zeroDateTimeBehavior" value="CONVERT_TO_NULL" />
